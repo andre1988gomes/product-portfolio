@@ -4,8 +4,11 @@
 We operate a product platform serving a large installed base running multiple software generations and capability levels. New features must coexist with legacy clients that do not support the same backend commands, APIs, or runtime guarantees.
 
 Product / domain: Connected platform feature delivery (multi-version installed base)
+
 Target users: End customers and internal operations/support teams
+
 Environment: Platform product with strong client-side capability dependencies
+
 Constraints: Backward compatibility, reliability and safety requirements, and operational risk from unsupported execution paths
 
 ## 2. Problem Statement
