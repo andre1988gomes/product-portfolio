@@ -3,24 +3,19 @@
 ## 1. Context
 We operate a product platform serving a large installed base running multiple software generations and capability levels. New features must coexist with legacy clients that do not support the same backend commands, APIs, or runtime guarantees.
 
-* Product / domain: Connected platform feature delivery (multi-version installed base)
-
-* Target users: End customers and internal operations/support teams
-
-* Environment: Platform product with strong client-side capability dependencies
-
-* Constraints: Backward compatibility, reliability and safety requirements, and operational risk from unsupported execution paths
+- Product / domain: Connected platform feature delivery (multi-version installed base)
+- Target users: End customers and internal operations/support teams
+- Environment: Platform product with strong client-side capability dependencies
+- Constraints: Backward compatibility, reliability and safety requirements, and operational risk from unsupported execution paths
 
 ## 2. Problem Statement
 A high-value feature was prioritised for rollout, but only a subset of the installed base (~30–40%) had the required platform capabilities to support it safely. Enabling the feature universally would trigger predictable failure modes on legacy versions, increasing operational noise and undermining trust.
 
 Examples of observed or expected failure modes included:
 
-* Rejected or partially executed commands due to unsupported capability contracts
-
-* Inconsistent client state after retries or timeouts
-
-* Increased support contacts framed as “feature instability” rather than technical incompatibility
+- Rejected or partially executed commands due to unsupported capability contracts
+- Inconsistent client state after retries or timeouts
+- Increased support contacts framed as “feature instability” rather than technical incompatibility
 
 The core challenge was delivering value to eligible users without degrading reliability for everyone else.
 
@@ -40,17 +35,14 @@ Discovery focused on capability distribution, operational risk, and user percept
 
 Key assumptions:
 
-* Only a minority of the installed base was technically eligible at launch (~30–40%).
-
-* Enabling the feature on ineligible versions leads to systematic, not random, failure modes.
-
-* Users interpret partial failures as product instability rather than version incompatibility.
+- Only a minority of the installed base was technically eligible at launch (~30–40%).
+- Enabling the feature on ineligible versions leads to systematic, not random, failure modes.
+- Users interpret partial failures as product instability rather than version incompatibility.
 
 Validation activities included:
 
-* Mapping version and capability coverage across the installed base.
-
-* Reviewing historical support and incident patterns for similar unsupported-command scenarios.
+- Mapping version and capability coverage across the installed base.
+- Reviewing historical support and incident patterns for similar unsupported-command scenarios.
 
 Aligning with engineering on the minimal capability contract required to guarantee safe execution.
 
