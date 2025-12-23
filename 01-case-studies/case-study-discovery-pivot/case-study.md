@@ -25,3 +25,16 @@ This assumption was treated as sufficiently validated based on indirect signals,
 ### User Objectives
 - Reduce perceived friction in the targeted workflow.
 - Improve speed and clarity when completing key tasks.
+
+## 4. Discovery and Assumptions
+Discovery activities were initiated to validate the core assumptions before committing to full delivery.
+
+Key assumptions:
+- Users clearly recognised the targeted workflow as a problem area. [Inference]
+- The proposed feature addressed the primary source of friction. [Inference]
+- Users would adopt a new solution if it reduced theoretical effort. [Inference]
+
+Discovery activities included:
+- Qualitative user interviews focused on recent workflow experiences.
+- Review of behavioural data related to task completion and drop-off.
+- Mapping the full user journey to identify actual pain points.
