@@ -48,14 +48,15 @@ Aligning with engineering on the minimal capability contract required to guarant
 
 ## 5. Options and Trade-offs
 
-| Option | Description | Pros | Cons |
-|------|-------------|------|------|
-| A — Rollout to all | Enable the feature for every user/version | Fastest perceived reach | High failure rate on legacy; operational risk; support load; potential incidents |
-| B — Manual allowlist | Enable only for selected accounts via manual list | Risk-controlled; quick start | Not scalable; governance overhead; error-prone |
-| C — Capability gating (selected) | Enable based on explicit capability checks (version/flags/contract) | Scalable; safe by default; repeatable pattern for future | Requires eligibility model; may disappoint ineligible users |
-| D — Build legacy compatibility layer | Engineering effort to support old versions | Maximum reach long-term | High cost; increases complexity; slows delivery; creates ongoing debt |
+| Option                           | Description                                           | Pros                                 | Cons                                                       |
+| -------------------------------- | ----------------------------------------------------- | ------------------------------------ | ---------------------------------------------------------- |
+| A — Rollout to all               | Enable the feature for every user/version             | Fast perceived reach                 | High failure rate on legacy; support load; incident risk   |
+| B — Manual allowlist             | Enable only selected users manually                   | Risk-controlled; fast initial launch | Not scalable; governance overhead; error-prone             |
+| C — Capability gating (selected) | Enable only when explicit capability criteria are met | Scalable; safe by default; reusable  | Reduced reach at launch; requires eligibility modelling    |
+| D — Legacy compatibility layer   | Extend support to old versions                        | Maximum reach                        | High engineering cost; long-term complexity; slows roadmap |
 
-We discarded Option A due to predictable reliability risk and Option D due to disproportionate cost and long-term maintenance overhead relative to expected incremental value.
+Option A was rejected due to predictable reliability degradation.
+Option D was rejected because the cost and long-term maintenance burden outweighed the incremental value of expanded reach.
 
 ## 6. Product Decision
 We chose capability gating as the default strategy: the feature would be available only when the platform explicitly confirmed eligibility (version + capability contract). Ineligible users would see a clear, non-broken experience (feature hidden or presented as unavailable with a rationale, depending on the surface area).
