@@ -56,15 +56,15 @@ Aligning with engineering on the minimal capability contract required to guarant
 | D — Legacy compatibility layer   | Extend support to old versions                        | Maximum reach                        | High engineering cost; long-term complexity; slows roadmap |
 
 Option A was rejected due to predictable reliability degradation.
+
 Option D was rejected because the cost and long-term maintenance burden outweighed the incremental value of expanded reach.
 
 ## 6. Product Decision
-We chose capability gating as the default strategy: the feature would be available only when the platform explicitly confirmed eligibility (version + capability contract). Ineligible users would see a clear, non-broken experience (feature hidden or presented as unavailable with a rationale, depending on the surface area).
+We selected capability-based gating as the default strategy. Feature activation required explicit confirmation of platform eligibility (version + capability contract). Ineligible users were prevented from entering broken flows.
 
-Rationale:
-- Reliability and trust were treated as first-class product requirements, not engineering concerns.
-- The approach scales: future features can reuse the same eligibility model and rollout controls.
-- It creates a clear contract between product intent and platform reality, reducing ambiguous failure modes.
+A key UX decision was to hide the feature entirely for ineligible users instead of exposing it with a disabled or error-prone state. This reduced confusion and avoided creating a perceived “broken feature”, at the cost of discoverability.
+
+This decision faced initial pushback from stakeholders concerned about reduced launch reach, but reliability and trust were treated as non-negotiable product requirements.
 
 ## 7. Delivery Approach
 We delivered in phases:
