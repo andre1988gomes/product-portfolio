@@ -12,9 +12,17 @@ We operate a product platform serving a large installed base running multiple so
 * Constraints: Backward compatibility, reliability and safety requirements, and operational risk from unsupported execution paths
 
 ## 2. Problem Statement
-A high-value feature was requested for broad rollout, but only a subset of the installed base had the required platform capabilities. Rolling it out universally would lead to unsupported execution on legacy versions, increasing failure rates, support burden, and potentially creating safety/reliability incidents.
+A high-value feature was prioritised for rollout, but only a subset of the installed base (~30–40%) had the required platform capabilities to support it safely. Enabling the feature universally would trigger predictable failure modes on legacy versions, increasing operational noise and undermining trust.
 
-We needed a product strategy that delivered value quickly to eligible users while preventing feature activation on incompatible versions—without fragmenting the product experience or creating long-term maintenance debt.
+Examples of observed or expected failure modes included:
+
+* Rejected or partially executed commands due to unsupported capability contracts
+
+* Inconsistent client state after retries or timeouts
+
+* Increased support contacts framed as “feature instability” rather than technical incompatibility
+
+The core challenge was delivering value to eligible users without degrading reliability for everyone else.
 
 ## 3. Objectives
 
