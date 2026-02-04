@@ -1,102 +1,81 @@
-# Product Management Portfolio
+# Product Portfolio – André Gomes
 
-This repository contains a structured collection of artefacts, case studies, frameworks, and examples of product work that reflect practical Product Management and Product Ownership practices.
+## How I Think About Product
 
-The goal of this portfolio is to demonstrate structured thinking, decision-making rigor, and the ability to connect product discovery, delivery, and impact assessment in a consistent and transparent way.
+I work as a Product Owner / Product Visionary in complex domains, often with strong technical constraints, where products can range from user-facing applications to platforms, APIs, and internal systems.
 
----
+My focus is on maximizing long-term product value, even when that means pushing back on short-term feature requests, redefining scope, or delaying delivery to reduce future complexity and risk.
 
-## Repository Contents
+I believe that:
 
-### 1. Case Studies
-End-to-end case studies covering the lifecycle of a product, feature, or initiative, including:
-- Problem definition and context
-- Business objectives
-- Discovery approach and hypotheses
-- Options analysis and trade-offs
-- Product decisions and rationale
-- Metrics and expected or observed impact
-- Learnings and retrospectives
-
-> Folder: `01-case-studies/`
+* Products exist to enable better decisions, not just to automate workflows
+* Discovery without delivery is theory; delivery without discovery is waste
+* APIs, platforms, and internal systems are products, even when their users are engineers or machines
+* Good product work is about making trade-offs explicit and intentional
 
 ---
 
-### 2. Product Documentation
-Examples of documentation used to communicate requirements and decisions with engineering teams and stakeholders:
-- Well-structured user stories
-- Epics and functional decomposition
-- Functional specifications
-- Flow diagrams and behavioural models
-- Reusable templates
+## What This Repository Is
 
-> Folder: `02-product-documentation/`
+This repository is a curated product portfolio.
 
----
+It contains real-world product artefacts, case studies, and frameworks that demonstrate how I approach:
 
-### 3. Product Discovery
-Artefacts representing discovery and validation practices:
-- Personas
-- Job stories (JTBD)
-- Opportunity maps
-- Interview guides and insight synthesis
-- Desirability, feasibility, and viability criteria
+* Problem discovery
+* Product strategy and prioritization
+* Execution and delivery
+* Validation, learning, and iteration
 
-> Folder: `03-product-discovery/`
+This is **not** a collection of templates for their own sake. Every artefact exists to support a product decision.
 
 ---
 
-### 4. Frameworks and Playbooks
-Reusable models and guides that support consistency and clarity in product work:
-- Prioritisation frameworks
-- Backlog governance models
-- Metrics definition guidelines
-- Decision-making processes
+## How to Navigate This Repository
 
-> Folder: `04-frameworks-and-playbooks/`
+The repository is structured around the full product lifecycle:
 
----
+1. **Product Discovery**
+   Understanding problems worth solving, before committing to solutions.
 
-### 5. Data Analysis
-Examples of data-informed product analysis:
-- Exploratory analysis using public datasets
-- Funnel and cohort analysis
-- Product metrics exploration
-- Analytical notebooks and experiments
+2. **Product Strategy & Frameworks**
+   Deciding what to build, what not to build, and why.
 
-> Folder: `05-data-analysis/`
+3. **Case Studies**
+   Concrete examples of product decisions made under real constraints.
 
----
+4. **Delivery & Documentation**
+   Translating intent into executable work while preserving product goals.
 
-### 6. Prototypes and Validations
-Lightweight prototypes, simulations, or validations used to test assumptions and business logic:
-- Simple scripts and simulations
-- Business rules validation
-- Functional or logic-based prototypes
+5. **Data, Validation & Learning**
+   Using data and feedback to evaluate outcomes and adjust direction.
 
-> Folder: `06-prototypes-and-validations/`
+Each section can be read independently, but together they represent a coherent product mindset.
 
 ---
 
-## Purpose of This Portfolio
+## My View on Product Ownership and Product Management
 
-This repository was created to:
-- Demonstrate the ability to break down complex product problems.
-- Showcase discovery, experimentation, and impact evaluation practices.
-- Provide examples of clear and structured product documentation.
-- Highlight autonomy in defining frameworks, processes, and tools.
-- Reinforce analytical and data-informed decision-making skills.
+In my experience:
 
----
+* Product Ownership without strategic ownership becomes backlog management
+* Product Management without delivery accountability becomes slideware
 
-## Navigation and Structure
+I aim to operate at the intersection:
 
-Each main folder may contain its own `README.md` to provide additional context and explanations.
-
-Templates and reusable artefacts are grouped within their respective sections to support consistency and reuse.
+* Owning outcomes, not just outputs
+* Connecting business intent with technical reality
+* Making trade-offs explicit to stakeholders and teams
 
 ---
+
+## How to Use This Portfolio
+
+* As a discussion starter in interviews or stakeholder conversations
+* As a reference for how I structure and reason about product problems
+* As a living body of work that evolves with my experience
+
+Feedback and discussion are welcome. Product thinking improves through challenge.
 
 ## Contact
 
-If you would like to discuss any artefact, methodology, or decision-making approach presented in this portfolio, feel free to reach out.
+If you would like to discuss any artefact, methodology, or decision-making approach presented in this portfolio, feel free to reach out to me.
