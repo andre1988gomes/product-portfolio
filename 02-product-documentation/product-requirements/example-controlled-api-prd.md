@@ -1,4 +1,4 @@
-# Product Requirements — Controlled API / OCPX
+# Product Requirements — Controlled API
 
 ---
 
@@ -6,7 +6,7 @@
 
 Smart charging for electric vehicles requires tight coordination between vehicles, backend systems, and external energy providers.
 
-Prior to the Controlled API, energy providers were interacting with BMW vehicles through uncontrolled channels, leading to:
+Prior to the Controlled API, energy providers were interacting with EV vehicles through uncontrolled channels, leading to:
 - loss of governance over vehicle behavior
 - lack of visibility and predictability in charging execution
 - inability to enforce consistent charging outcomes
@@ -40,7 +40,7 @@ The product should enable the following outcomes:
   Energy providers receive accurate, timely data that enables predictable charging plans.
 
 - **Long-term platform autonomy**  
-  BMW retains control over critical execution paths without excessive dependency on other teams or systems.
+  Retains control over critical execution paths without excessive dependency on other teams or systems.
 
 ---
 
@@ -49,7 +49,7 @@ The product should enable the following outcomes:
 ### Constraints
 
 - Vehicle behavior varies significantly across models and generations.
-- Backend systems (e.g. Vehicle Shadow, Remote Services) cannot be assumed to be fully reliable or real-time.
+- Backend systems cannot be assumed to be fully reliable or real-time.
 - Physical constraints (battery behavior, charging hardware) can override digital intent.
 - Charging execution depends on external energy providers with independent systems and priorities.
 - Location accuracy and inferred data are inherently unreliable in certain scenarios.
