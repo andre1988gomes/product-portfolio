@@ -30,13 +30,13 @@ A wrong abstraction would not fail loudly — it would silently degrade outcomes
 ### Stakeholders
 
 **Internal**
-- BMW Functional Owner  
-- BMW IT Product Owner  
-- BMW Solutions Architect  
+- Functional Owner  
+- IT Product Owner  
+- Solutions Architect  
 - Product and engineering teams  
 
 **External**
-- BMW vehicle owners (indirect impact)  
+- Vehicle owners (indirect impact)  
 - Energy providers relying on charging data accuracy  
 
 ---
