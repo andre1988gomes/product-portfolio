@@ -31,7 +31,7 @@ The product should enable the following outcomes:
   Vehicles consistently reach the user-defined target SoC at the planned departure time.
 
 - **Controlled ecosystem interaction**  
-  All third-party charging interactions are mediated, observable, and governed by BMW systems.
+  All third-party charging interactions are mediated, observable, and governed by other systems.
 
 - **Reduced operational noise**  
   Fewer charging deviations and renegotiations caused by incorrect assumptions or inferred data.
