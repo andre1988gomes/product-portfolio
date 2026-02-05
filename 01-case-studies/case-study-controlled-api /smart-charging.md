@@ -9,7 +9,7 @@ The Controlled API was created to address multiple, interrelated problems across
 
 ### 1. User Problem — Smart Charging as a “Plug & Forget” Experience
 
-BMW EV users expect smart charging to be effortless and cost-efficient.  
+EV users expect smart charging to be effortless and cost-efficient.  
 The goal was to enable a *plug & forget* experience where users can:
 
 - select **Optimized Charging Mode**
@@ -22,11 +22,11 @@ Delivering this experience requires reliable coordination between vehicles, back
 
 ### 2. Business Problem — Loss of Control and Monetization
 
-Before the Controlled API, energy providers were directly controlling BMW vehicles via the My BMW App API, without governance or monetization.
+Before the Controlled API, energy providers were directly controlling vehicles via the Vehicle App API, without governance or monetization.
 
 This resulted in:
 - lack of control over third-party vehicle operations
-- direct financial loss for BMW
+- direct financial loss for the company
 
 The Controlled API reintroduced control and enabled a monetization model, allowing BMW to charge energy providers per charging session.
 
@@ -54,7 +54,7 @@ This positions the Controlled API as an **active control and governance layer**,
 To avoid full dependency on external energy providers, the platform can also generate its own charging plans.
 
 For specific use cases:
-- BMW systems access market tariff data
+- Internal systems access market tariff data
 - charging plans are generated internally
 - plans aim to deliver the best cost–benefit outcome for the user
 
@@ -63,13 +63,13 @@ This increases resilience and long-term strategic flexibility.
 ### Stakeholders
 
 **External**
-- BMW vehicle owners  
+- Vehicle owners  
 - Energy providers (10+ across Europe)
 
 **Internal**
-- BMW Functional Owner  
+- Functional Owner  
 - Other components in the functional chain  
-- Other CTW teams
+- Other internal teams
 
 ---
 
@@ -83,7 +83,7 @@ Charging plans could only be executed successfully if **all layers behaved withi
 
 Successful execution depended on:
 - vehicle-specific behavior (model and generation differences)
-- backend reliability (Vehicle Shadow, Remote Services, other APIs)
+- backend reliability (Vehicle state, Remote calls, other APIs)
 - physical and mechanical constraints (battery behavior, charging hardware)
 
 A failure in any layer could invalidate an otherwise correct plan.
@@ -113,10 +113,10 @@ Decisions prioritized:
 
 ## Options Considered
 
-### Option — Reuse Existing BMW Data Streams and Services
+### Option — Reuse Existing Data Streams and Services
 
 One obvious alternative was to:
-- rely on charging data from existing BMW backend services
+- rely on charging data from existing backend services
 - reuse Kinesis streams owned by other teams instead of creating a dedicated one
 
 **Short-term benefits**
