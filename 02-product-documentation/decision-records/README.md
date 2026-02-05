@@ -47,13 +47,3 @@ I create a decision record when:
 - the decision materially impacts outcomes or risk
 
 If a decision can be safely changed later, it does not need a record.
-
----
-
-## Files in This Folder
-
-- `adr-template.md`  
-  Generic template for documenting product decisions.
-
-- `example-risk-based-decision.md`  
-  A concrete example of a risk-driven product decision under real constraints.
