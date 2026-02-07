@@ -1,10 +1,25 @@
-# Prototypes and Validations
+# Prototypes & Validations
 
-This section contains lightweight prototypes, simulations, or validations used to test assumptions and business logic early.
+This section documents prototypes and experiments used to **reduce uncertainty and validate direction** before committing to full delivery.
 
-Examples include:
-- Simple scripts or simulations
-- Business rule validation
-- Logic-based or functional prototypes
+Prototypes are treated as learning tools, not delivery artefacts.
 
-These artefacts demonstrate fast feedback loops and pragmatic validation approaches.
+---
+
+## What Belongs Here
+
+A prototype belongs here only if it:
+- tested a critical assumption
+- reduced delivery or decision risk
+- informed a clear product decision
+
+---
+
+## What Does Not Belong Here
+
+This section explicitly excludes:
+- technical proofs of concept without product framing
+- exploratory prototypes with no decision outcome
+- artefacts created after the decision was already made
+
+If no decision changed, the prototype does not belong here.
