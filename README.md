@@ -2,16 +2,28 @@
 
 ## How I Think About Product
 
-I work as a Product Owner / Product Visionary in complex domains, often with strong technical constraints, where products can range from user-facing applications to platforms, APIs, and internal systems.
+I work as a Product Owner / Product Visionary in complex domains, often with strong technical constraints, where products range from user-facing applications to platforms, APIs, and internal systems.
 
-My focus is on maximizing long-term product value, even when that means pushing back on short-term feature requests, redefining scope, or delaying delivery to reduce future complexity and risk.
+My focus is on maximizing long-term product value, even when that means pushing back on short-term feature requests, redefining scope, or deliberately slowing delivery to reduce future complexity and risk.
 
 I believe that:
+- Products exist to enable better decisions, not just to automate workflows
+- Discovery without delivery is theory; delivery without discovery is waste
+- APIs, platforms, and internal systems are products, even when their users are engineers or machines
+- Good product work is about making trade-offs explicit and intentional
 
-* Products exist to enable better decisions, not just to automate workflows
-* Discovery without delivery is theory; delivery without discovery is waste
-* APIs, platforms, and internal systems are products, even when their users are engineers or machines
-* Good product work is about making trade-offs explicit and intentional
+---
+
+## Product Principles
+
+The work in this repository is guided by a set of **Product Principles** that define how decisions are made across discovery, delivery, and execution.
+
+These principles are not aspirational statements.  
+They act as **constraints on decision-making**, validated through real product work under technical, organizational, and market constraints.
+
+👉 [Product Principles](./PRODUCT-PRINCIPLES.md)
+
+They explain *why* the artefacts, case studies, and frameworks in this portfolio look the way they do.
 
 ---
 
@@ -20,66 +32,72 @@ I believe that:
 This repository is a curated product portfolio.
 
 It contains real-world product artefacts, case studies, and frameworks that demonstrate how I approach:
+- problem discovery and risk reduction
+- product strategy and prioritization
+- execution and delivery under constraints
+- validation, learning, and iteration
 
-* Problem discovery
-* Product strategy and prioritization
-* Execution and delivery
-* Validation, learning, and iteration
-
-This is **not** a collection of templates for their own sake. Every artefact exists to support a product decision.
+This is **not** a collection of templates for their own sake.  
+Every artefact exists to support or explain a concrete product decision.
 
 Several of the decisions, case studies, and frameworks in this repository align closely with **Evidence-Based Management (EBM)** principles.
 
-Rather than treating EBM as a reporting framework, these examples show how value, risk, adaptability, and time-to-market are continuously balanced through product decisions, discovery, and delivery under real constraints.
+Rather than treating EBM as a reporting or metrics framework, these examples show how value, risk, adaptability, and time-to-market are continuously balanced through real product decisions under uncertainty.
 
 ---
 
-## How to Navigate This Repository
+## How to Read This Repository
 
-The repository is structured around the full product lifecycle:
+This repository is **not organized as a linear product process**.
 
-1. **Product Discovery**
-   Understanding problems worth solving, before committing to solutions.
+The numbered folders represent different **lenses on product work**, not sequential steps:
 
-2. **Product Strategy & Frameworks**
-   Deciding what to build, what not to build, and why.
+- **01 — Case Studies**  
+  Real product decisions, trade-offs, and outcomes under real constraints.
 
-3. **Case Studies**
-   Concrete examples of product decisions made under real constraints.
+- **02 — Product Documentation**  
+  How product intent is translated into executable work without turning the backlog into a feature factory.
 
-4. **Delivery & Documentation**
-   Translating intent into executable work while preserving product goals.
+- **03 — Product Discovery**  
+  Discovery as a decision-making and risk-reduction tool, not a ritual.
 
-5. **Data, Validation & Learning**
-   Using data and feedback to evaluate outcomes and adjust direction.
+- **04 — Frameworks & Playbooks**  
+  Opinionated frameworks derived from real cases, not generic best practices.
 
-Each section can be read independently, but together they represent a coherent product mindset.
+- **05 — Data Analysis**  
+  Data used to inform, validate, or change product decisions.
+
+- **06 — Prototypes & Validations**  
+  Prototypes and experiments used to reduce uncertainty and validate direction.
+
+Each section can be read independently, but together they represent a coherent product mindset grounded in outcomes and trade-offs.
 
 ---
 
 ## My View on Product Ownership and Product Management
 
 In my experience:
-
-* Product Ownership without strategic ownership becomes backlog management
-* Product Management without delivery accountability becomes slideware
+- Product Ownership without strategic ownership becomes backlog management
+- Product Management without delivery accountability becomes slideware
 
 I aim to operate at the intersection:
-
-* Owning outcomes, not just outputs
-* Connecting business intent with technical reality
-* Making trade-offs explicit to stakeholders and teams
+- owning outcomes, not just outputs
+- connecting business intent with technical reality
+- making trade-offs explicit to stakeholders and teams
 
 ---
 
 ## How to Use This Portfolio
 
-* As a discussion starter in interviews or stakeholder conversations
-* As a reference for how I structure and reason about product problems
-* As a living body of work that evolves with my experience
+This portfolio can be used:
+- as a discussion starter in interviews or stakeholder conversations
+- as a reference for how I structure and reason about product problems
+- as a living body of work that evolves with experience and learning
 
-Feedback and discussion are welcome. Product thinking improves through challenge.
+Feedback and challenge are welcome. Product thinking improves through scrutiny.
+
+---
 
 ## Contact
 
-If you would like to discuss any artefact, methodology, or decision-making approach presented in this portfolio, feel free to reach out to me.
+If you would like to discuss any artefact, decision, or approach presented in this portfolio, feel free to reach out.
