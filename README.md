@@ -28,8 +28,6 @@ It contains real-world product artefacts, case studies, and frameworks that demo
 
 This is **not** a collection of templates for their own sake. Every artefact exists to support a product decision.
 
----
-
 Several of the decisions, case studies, and frameworks in this repository align closely with **Evidence-Based Management (EBM)** principles.
 
 Rather than treating EBM as a reporting framework, these examples show how value, risk, adaptability, and time-to-market are continuously balanced through product decisions, discovery, and delivery under real constraints.
