@@ -30,6 +30,12 @@ This is **not** a collection of templates for their own sake. Every artefact exi
 
 ---
 
+Several of the decisions, case studies, and frameworks in this repository align closely with **Evidence-Based Management (EBM)** principles.
+
+Rather than treating EBM as a reporting framework, these examples show how value, risk, adaptability, and time-to-market are continuously balanced through product decisions, discovery, and delivery under real constraints.
+
+---
+
 ## How to Navigate This Repository
 
 The repository is structured around the full product lifecycle:
