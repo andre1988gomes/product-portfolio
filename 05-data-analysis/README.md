@@ -1,11 +1,26 @@
 # Data Analysis
 
-This section showcases examples of data-informed analysis used to support product decisions.
+This section contains examples where **data directly informed a product decision**.
 
-Contents may include:
-- Exploratory analysis using public datasets
-- Funnel and cohort analysis
-- Product metrics exploration
-- Analytical notebooks and experiments
+Data is not presented as dashboards or metrics for their own sake.
+Each artefact exists to answer a specific question or reduce decision risk.
 
-The emphasis is on interpretation and decision support rather than complex modelling.
+---
+
+## What Belongs Here
+
+Data analysis is included only when it:
+- supported a stop, pivot, or proceed decision
+- invalidated or confirmed a critical assumption
+- changed product direction, scope, or priority
+
+---
+
+## What Does Not Belong Here
+
+This section explicitly excludes:
+- vanity metrics
+- dashboards without decisions
+- analysis that did not influence product direction
+
+Data without a decision is noise.
