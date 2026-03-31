@@ -1,57 +1,20 @@
-# Product Discovery
+# Discovery
 
-This section contains examples of how I use **product discovery as a decision-making tool**, not as a pre-delivery ritual.
+This section contains discovery artifacts used to support decisions, not to prove that discovery happened. The focus is on testing assumptions, deciding when evidence is sufficient, and changing direction when the problem framing does not hold.
 
-Discovery exists to:
-- validate or invalidate assumptions
-- reduce the risk of building the wrong thing well
-- inform product direction, not just feature scope
+## What You Will Find Here
 
-In several cases, discovery led to **changing or abandoning direction**, which is treated as a successful outcome.
+| Area | Purpose |
+| --- | --- |
+| Discovery examples | Show how assumptions were validated or invalidated in real product contexts. |
+| Frameworks | Capture repeatable ways to structure discovery around decisions. |
+| Cheatsheets and templates | Keep discovery focused on signal quality rather than activity volume. |
 
----
+## Suggested Starting Points
 
-## What Product Discovery Means Here
+- [Example - Invalidating a core assumption through discovery](./example-invalidated-assumption.md)
+- [Example - Stopping discovery and committing to a pivot](./decision-driven-discovery/example-stop-or-proceed.md)
+- [Framework - Decision-driven discovery](./decision-driven-discovery/decision-driven-discovery-framework.md)
+- [Example - Assumption mapping for smart charging orchestration](./assumption-mapping/example-assumption-map.md)
 
-Product discovery is used to answer questions such as:
-- Is this problem real and meaningful?
-- Who is actually experiencing the pain?
-- Are we solving the right problem, or just a visible symptom?
-- What assumption is most likely to break this initiative?
-
-Discovery is complete when a **decision can be made with confidence**, not when a set of activities has been executed.
-
----
-
-## What This Is Not
-
-This section is **not** about:
-- generic discovery frameworks
-- dual-track process descriptions
-- discovery theatre or artefact accumulation
-- validating pre-decided solutions
-
-Activities are only used if they meaningfully reduce uncertainty.
-
----
-
-## Artefacts in This Section
-
-The artefacts in this folder include:
-- assumption mapping and risk framing
-- interview synthesis focused on decision signals
-- examples where discovery invalidated direction
-- lightweight templates used to structure thinking
-
-These artefacts are best read alongside the **Case Studies**, where their impact on decisions is visible.
-
----
-
-## Why This Section Exists
-
-Strong product decisions depend on:
-- knowing what you *don’t* know
-- making assumptions explicit
-- being willing to change direction early
-
-This section shows how discovery supports those outcomes.
+These artifacts support the flagship case studies and the strategy documents in the portfolio root.

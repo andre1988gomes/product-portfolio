@@ -1,91 +1,88 @@
-# Decision Record — Owning the Charging Execution Data Stream
+# Decision Record - Owning The Charging Execution Data Stream
+
+## Evidence Metadata
+
+| Field | Value |
+| --- | --- |
+| Used in | [Controlled API / OCPX](../../01-case-studies/case-study-controlled-api/smart-charging.md) |
+| Decision supported | Own the charging execution data stream instead of relying on another team for a critical dependency. |
+| Evidence type | Decision record, Operational, Strategy |
+| Confidence level | High |
+| Outcome influenced | Faster incident response, stronger autonomy, and clearer ownership of the charging loop. |
 
 **Status:** Accepted  
-**Date:** <YYYY-MM-DD>  
-**Decision Owner:** Product Owner
-
----
+**Date:** Redacted  
+**Decision Owner:** Product Owner / Product Manager
 
 ## Context
 
-The Controlled API required reliable, real-time visibility into vehicle charging state in order to:
-- monitor charging execution
-- detect deviations from planned behavior
-- trigger renegotiations when necessary
+Reliable visibility into charging state was required to:
 
-An early product decision was required on whether to:
-- reuse existing OEM-owned data streams maintained by other teams
-- or create and own a dedicated data stream tailored specifically to charging execution needs
+- monitor execution
+- detect deviations from the planned charging behavior
+- trigger renegotiation when needed
 
-This decision had long-term implications for autonomy, reliability, and ownership of charging outcomes.
-
----
+An early decision had to be made between reusing existing streams owned by other teams or creating a dedicated stream shaped around charging execution needs.
 
 ## Decision Drivers
 
-- Outcome reliability (reaching the target State of Charge)
-- Ability to react quickly to deviations
-- Control over data semantics and configuration
-- Reduction of cross-team dependencies
-- Long-term platform autonomy
-
----
+- outcome reliability
+- response speed when the charging session diverges
+- control over data semantics and configuration
+- lower dependency drag
+- long-term platform autonomy
 
 ## Options Considered
 
-### Option A — Reuse Existing OEM Data Streams
+### Option A - Reuse existing OEM data streams
 
-- Faster initial development
-- Lower upfront implementation cost
-- Reduced operational responsibility
+Why it was viable:
 
-**Risks**
-- Dependency on other teams’ priorities and timelines
-- Limited control over configuration and evolution
-- Slower response to incidents and product-driven changes
+- lower initial implementation cost
+- faster first delivery
+- less operational ownership in the short term
 
----
+Key risks:
 
-### Option B — Own a Dedicated Charging Data Stream (Selected)
+- dependence on other teams' priorities
+- limited control over change cadence and semantics
+- slower response to product-driven changes and incidents
 
-- Full ownership over data structure and behavior
-- Ability to evolve monitoring and renegotiation logic
-- Faster iteration and incident response
+### Option B - Own a dedicated charging data stream
 
-**Risks**
-- Higher initial development effort
-- Increased operational responsibility
-- Short-term delivery delays
+Why it was viable:
 
----
+- stronger control over data behavior
+- faster evolution of monitoring and renegotiation logic
+- direct ownership of a product-critical path
+
+Key risks:
+
+- more implementation work upfront
+- more operational responsibility
+- short-term delivery delay elsewhere
 
 ## Decision
 
-**We chose to own a dedicated charging execution data stream, accepting higher initial complexity to preserve outcome reliability and long-term autonomy.**
-
-This decision explicitly prioritized control and correctness over short-term delivery speed.
-
----
+We chose to own a dedicated charging execution stream and accept higher short-term complexity to preserve reliability and product autonomy.
 
 ## Consequences
 
-**Positive**
-- Increased system stability
-- Faster reaction to charging deviations
-- Reduced coordination overhead with external teams
+### Benefits gained
 
-**Costs**
-- One to two sprints of additional implementation effort
-- Increased ownership and maintenance responsibility
+- stronger control over a critical dependency
+- faster response to incidents and product change
+- less coordination overhead for data-related evolution
 
-**Risks**
-- Requires sustained operational discipline
-- Must be revisited if organizational constraints change
+### Costs accepted
 
----
+- roughly one to two sprints of additional effort
+- ongoing responsibility for operation and evolution
+
+### Risks introduced
+
+- the product team must maintain the ownership discipline needed to justify this investment
 
 ## Notes
 
-This decision should be revisited if:
-- vehicle-side behavior becomes significantly more standardized
-- alternative data sources achieve equivalent reliability and ownership guarantees
+This decision should be revisited only if alternative data sources reach similar reliability and control standards without recreating the same dependency risk.

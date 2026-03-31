@@ -1,80 +1,71 @@
-# Example — Assumption Mapping for Smart Charging Orchestration
+# Example - Assumption Mapping For Smart Charging Orchestration
 
----
+## Evidence Metadata
+
+| Field | Value |
+| --- | --- |
+| Used in | [Controlled API / OCPX](../../01-case-studies/case-study-controlled-api/smart-charging.md), [Pre-Charging](../../01-case-studies/case-study-pre-charging/Accuracy-over-assumptions.md) |
+| Decision supported | Prioritize current validated data and reliable orchestration over assumption reuse and thin ownership. |
+| Evidence type | Discovery artifact, Qualitative, Proxy |
+| Confidence level | Medium to High |
+| Outcome influenced | Focus of discovery, validation strategy, and prioritization of the riskiest assumptions. |
 
 ## Identified Assumptions
 
-### User & Behavior
-- Users value automated charging outcomes over manual control.
+### User And Behavior
+
+- Users value reliable automated outcomes over manual control.
 - Users will trust the system to reach a target outcome without supervision.
 
-### Value & Outcomes
-- Consistently reaching the target State of Charge is more valuable than minimizing charging cost variability.
+### Value And Outcomes
+
+- Reaching the target state of charge consistently matters more than minimizing cost variability.
 - Users notice and care about failed or late charging outcomes.
 
-### Feasibility & Constraints
-- Vehicle and infrastructure behavior is sufficiently predictable within a single session.
+### Feasibility And Constraints
+
+- Vehicle and infrastructure behavior is predictable enough within a single session.
 - Real-time data is more reliable than inferred or cached data.
 
-### Ecosystem & Stakeholders
-- External energy providers can respond to renegotiation requests within acceptable time bounds.
-- Providing more accurate data reduces renegotiation frequency.
+### Ecosystem And Stakeholders
 
----
+- External providers can respond to renegotiation within acceptable bounds.
+- Better input quality reduces renegotiation frequency.
 
 ## Classification
 
 | Assumption | Certainty | Impact | Classification |
-|----------|----------|--------|----------------|
+| --- | --- | --- | --- |
 | Users trust automated outcomes | Medium | High | Critical |
-| Target SoC matters more than cost variance | Medium | High | Critical |
+| Target state of charge matters more than cost variance | Medium | High | Critical |
 | Real-time data reduces deviations | Medium | High | Critical |
 | Providers can renegotiate in time | Low | High | Critical |
-| Cached data is sufficient | Low | High | Critical (rejected) |
-
----
+| Cached data is sufficient | Low | High | Critical and rejected |
 
 ## Highest-Risk Assumption
 
-**Providing accurate, real-time data to external partners will reduce deviations and renegotiations.**
-
-If this assumption is wrong:
-- system complexity increases without benefit
-- renegotiations remain frequent
-- trust does not improve
-
----
+Providing accurate, current data to external partners will reduce deviations and renegotiations enough to justify the extra complexity.
 
 ## Disconfirming Signals
 
-Evidence that would invalidate the assumption:
-- renegotiation frequency remains unchanged
-- deviations occur despite accurate inputs
-- partners fail to use the data effectively
+The assumption would weaken if:
 
-Evidence that would support it:
-- measurable reduction in deviations
-- fewer renegotiations over time
-- improved predictability reported by partners
+- renegotiation frequency stayed unchanged
+- deviations continued despite higher-quality inputs
+- partners could not use the better data effectively
 
----
+It would strengthen if:
+
+- deviations decreased
+- renegotiations became less frequent or more explainable
+- partners reported better predictability
 
 ## Discovery Activities
 
-- Compare sessions using inferred data vs real-time validated data.
-- Review renegotiation causes before and after introducing validation.
-- Collect qualitative feedback from partners on data usefulness.
-
----
+- compare sessions using inferred data versus current validated data
+- review renegotiation causes before and after stronger validation
+- collect partner feedback on data usefulness and explainability
 
 ## Decision Outcome
 
-The assumption was **supported**.
-
-Discovery justified prioritizing correctness over optimization shortcuts.
-
----
-
-## Key Learning
-
-In variable systems, **assumption reuse is often riskier than repeated validation**.
+The assumption was supported strongly enough to prioritize correctness over optimization shortcuts.

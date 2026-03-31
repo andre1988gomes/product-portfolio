@@ -1,63 +1,39 @@
-# Discovery Signals — When to Continue, Pivot, or Stop
+# Discovery Signals - When To Continue, Pivot, Or Stop
 
-This cheatsheet captures the **signals I use in practice** to decide whether discovery should continue, pivot direction, or stop and commit.
+## Evidence Metadata
 
-It is intentionally lightweight and biased toward decision-making, not activity tracking.
+| Field | Value |
+| --- | --- |
+| Used in | [Discovery Pivot](../01-case-studies/case-study-discovery-pivot/case-study.md) and reusable across discovery work |
+| Decision supported | Decide when discovery should continue, pivot direction, or stop and commit. |
+| Evidence type | Heuristic, Qualitative |
+| Confidence level | High |
+| Outcome influenced | Faster decision-making and less discovery theater. |
 
----
+## Continue Discovery When
 
-## Signals to CONTINUE Discovery
+- signals are contradictory
+- different user segments describe materially different problems
+- the decision would plausibly change with more evidence
+- core assumptions are still being challenged but not yet resolved
 
-Continue discovery when:
-- signals are contradictory across users or data sources
-- different user segments report materially different problems
-- uncertainty remains around *which* problem matters most
-- assumptions are being challenged but not yet invalidated
-- additional discovery is likely to change the decision
+## Pivot When
 
-Continuing discovery is justified when it **reduces decision risk**, not when it merely increases confidence.
-
----
-
-## Signals to PIVOT Direction
-
-Pivot when:
-- the original problem is consistently described as secondary or marginal
-- an adjacent problem emerges repeatedly and unprompted
-- users explicitly state they would not change behavior for the proposed direction
-- effort required to solve the original problem outweighs perceived value
+- the original problem is consistently secondary
+- an adjacent problem emerges repeatedly without prompting
+- users say they would not change behavior for the current direction
 - discovery reveals value, but in a different problem space
 
-A pivot is not a failure — it is a **reframing of where value actually lies**.
+## Stop Discovery And Commit When
 
----
-
-## Signals to STOP Discovery and Commit
-
-Stop discovery when:
-- qualitative signals converge across users
-- disconfirming evidence invalidates a core assumption
-- remaining unknowns are delivery risks, not decision risks
+- signals converge
+- a core assumption is clearly invalidated or clearly supported
+- the remaining unknowns are delivery risks, not decision risks
 - discovery starts repeating known insights
-- the cost of delay exceeds the cost of being wrong
 
-At this point, continuing discovery delays accountability.
+## Anti-Patterns
 
----
-
-## Signals of Discovery Anti-Patterns
-
-Treat these as warning signs:
-- discovery continues without a clear decision to be made
-- activities are added without removing uncertainty
-- teams seek more data to avoid committing
-- discovery outputs do not change direction or scope
-- discovery is used to justify pre-made decisions
-
-Discovery should create **clarity**, not comfort.
-
----
-
-## Guiding Heuristic
-
-> **Discovery should end when the decision becomes obvious — not when everyone feels safe.**
+- discovery without a concrete decision to make
+- more activities without less uncertainty
+- using more research to avoid commitment
+- using discovery to justify a pre-made decision

@@ -1,77 +1,54 @@
-# Product Requirements — <Initiative / Product Name>
+# Product Requirements - Outcome-Driven Template
 
----
+## Evidence Metadata
 
-## Context & Problem Statement
+| Field | Value |
+| --- | --- |
+| Used in | Reusable across product requirement examples in this portfolio |
+| Decision supported | Define product intent through outcomes, constraints, and non-goals before detailed solutioning. |
+| Evidence type | Template |
+| Confidence level | High |
+| Outcome influenced | Stronger problem framing and clearer product documentation. |
+
+## Context And Problem Statement
 
 Describe the problem this initiative exists to solve.
 
-Focus on:
-- why this problem matters now
-- who is affected
-- what happens if the problem is not addressed
-
-Avoid describing solutions at this stage.
-
----
+- Why does it matter now?
+- Who is affected?
+- What happens if the problem is not addressed?
 
 ## Desired Outcomes
 
-Define success in terms of **outcomes**, not features.
+Define success in terms of outcomes, not feature count.
 
-Examples:
 - behavioral change
-- reduction of risk or uncertainty
-- improvement in reliability or predictability
-- increased trust or adoption
+- improved reliability or predictability
+- reduced risk or uncertainty
+- stronger trust, adoption, or retention
 
-Outcomes should be observable, even if not perfectly measurable.
+## Constraints And Assumptions
 
----
+List the realities that shape the solution space.
 
-## Constraints & Assumptions
-
-List the constraints that shape the solution space.
-
-Consider:
 - technical or system limitations
-- organizational or ownership boundaries
+- organizational boundaries
 - regulatory or physical constraints
 - assumptions that must hold true
 
-Explicitly calling out assumptions helps avoid hidden risk.
-
----
-
 ## Non-Goals
 
-State clearly what this initiative is **not** trying to achieve.
+State explicitly what this initiative is not trying to achieve.
 
-This section exists to:
-- prevent scope creep
-- avoid implicit expectations
-- protect focus during delivery
-
-Examples:
-- problems intentionally left unsolved
-- user segments explicitly out of scope
-- optimizations deferred by design
-
----
+- out-of-scope user segments
+- optimizations intentionally deferred
+- adjacent problems not being solved here
 
 ## Success Signals
 
-Describe how progress and success will be evaluated.
+Describe how progress will be evaluated.
 
-This can include:
-- qualitative signals (user feedback, reduced friction)
-- operational indicators (fewer incidents, fewer renegotiations)
-- proxy metrics where direct measurement is not feasible
-
-The goal is not perfect measurement, but shared understanding of success.
-
----
-
-## Notes
-
-Capture any additional context, open questions, or risks that should remain visible during delivery.
+- qualitative signals
+- operational indicators
+- proxy metrics
+- direct metrics when they are available and safe to use

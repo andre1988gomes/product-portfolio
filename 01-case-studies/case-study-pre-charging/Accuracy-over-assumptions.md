@@ -1,176 +1,146 @@
-# Case Study — Pre-Charging  
-**Choosing accuracy over assumptions in product design**
+# Case Study - Pre-Charging
+**Choosing accuracy over assumption reuse in a system where optimization errors would show up as silent customer harm**
 
----
+## Snapshot
 
-## Context
+| Field | Value |
+| --- | --- |
+| Role | Product Owner / Product Manager |
+| Domain | Smart charging product design and orchestration |
+| Users / customers | Vehicle owners, energy providers, and internal charging stakeholders |
+| Scope / complexity | Location ambiguity, variable charging conditions, visible user impact, and cross-functional disagreement on the right abstraction |
+| Timeframe | Decision made during product design before scaling the approach |
+| Evidence type | Operational, Qualitative, Proxy |
+| Key result | Rejected location-based assumption reuse in favor of session-based validation, improving correctness and reducing silent degradation risk. |
 
-### Problem Space
+## Problem And Why It Mattered
 
-As part of the smart charging ecosystem, there was a need to provide charging-relevant data early enough to enable planning and optimization before charging execution.
+The team needed a way to gather charging-relevant information early enough to support planning before charging execution. At first glance, this looked like an optimization problem: capture data once, reuse it later, and reduce repeated work.
 
-This led to discussions around introducing a *pre-charging* concept: collecting vehicle and grid data ahead of time to reduce uncertainty and enable accurate charging plans.
+In reality, it was a product correctness problem. If the product reused outdated or inferred charging conditions, it would not fail loudly. It would fail by producing worse outcomes over time while still looking efficient on the surface.
 
-The open question was not whether pre-charging was needed, but **how it should be designed**.
+That mattered because the user promise was outcome-based, not process-based. If the wrong assumptions fed the plan, the product would gradually lose trust with both drivers and energy partners.
 
-### Why This Was Hard
+## User / Customer Context
 
-The problem space appeared deceptively simple.
+Vehicle owners cared about whether the charging outcome was correct and predictable. They did not care whether the system looked efficient internally if it occasionally delivered the wrong result.
 
-At first glance, pre-charging looked like a data optimization problem.  
-In reality, it was a **modeling, correctness, and trust problem**, with direct impact on:
+Energy providers depended on the accuracy of the inputs they received. Poor upstream assumptions increased the chance of:
 
-- charging accuracy  
-- user perception  
-- system reliability  
-- long-term product credibility  
+- incorrect charging plans
+- late renegotiation
+- harder-to-explain execution behavior
 
-A wrong abstraction would not fail loudly — it would silently degrade outcomes.
+The user-facing wrinkle was important: the initial pre-charging behavior was visible to the driver because it involved charging at maximum available power. That made trust especially sensitive.
 
-### Stakeholders
+## Business Context
 
-**Internal**
-- Functional Owner  
-- IT Product Owner  
-- Solutions Architect  
-- Product and engineering teams  
+The product needed a design that could scale without slowly degrading reliability. A "save the last known settings by location" model looked attractive because it reduced repeated work and created a cleaner execution story.
 
-**External**
-- Vehicle owners (indirect impact)  
-- Energy providers relying on charging data accuracy  
+The business risk was that convenience would mask correctness issues:
 
----
+- the product would appear more optimized
+- teams would spend less time validating inputs upfront
+- but more time would later be spent explaining deviations, renegotiations, and trust erosion
+
+This was therefore a product design decision with operational and partner implications, not just an implementation preference.
 
 ## Constraints
 
-### Real-World Variability
+Several realities made assumption reuse risky:
 
-Charging behavior is highly sensitive to real-time conditions, including:
-- vehicle and battery state
-- charging infrastructure characteristics
-- grid conditions at the moment of charging
+- charging behavior depends on real-time vehicle, battery, and infrastructure conditions
+- the visible pre-charging step directly affects user perception
+- location detection was approximate, which meant multiple wallboxes could be treated as the same place
+- charging characteristics could vary even at the same nominal location
 
-Any solution assuming stability across sessions introduced significant risk.
-
-### User Perception
-
-The initial pre-charging execution was **perceivable by the user**, as it involved charging the vehicle at maximum available power.
-
-This meant:
-- pre-charging could not be treated as an invisible background process
-- incorrect assumptions would immediately affect user trust
-
-### Location Accuracy
-
-The proposed approach relied on GPS-based location detection with an approximate radius of 100 meters.
-
-As a result:
-- different wallboxes could fall under the same location
-- electrical characteristics could differ significantly
-- inferred charging data could easily be incorrect
-
-This made location-based reuse of charging parameters inherently unreliable.
-
----
+The core constraint was that stability across sessions could not be assumed safely enough to become the default design.
 
 ## Options Considered
 
-### Option — Last Known Settings per Location (Proposed)
+### Option A - Reuse last known settings by location
 
-The proposed solution worked as follows:
-- the user plugs in the vehicle and selects optimized charging
-- the backend immediately starts charging at maximum available power
-- this initial charging phase exposes all required vehicle and grid parameters
-- the backend stores these parameters together with the vehicle location
-- for subsequent sessions at the same location, the backend reuses the stored data and skips pre-charging
+This option looked efficient because it reduced repeated data collection and made the system appear smoother after the first session.
 
-**Why it was attractive**
-- pre-charging needed to happen only once per location
-- reduced repeated data collection
-- simpler execution model over time
+It was rejected because:
 
-**Why it was risky**
-- the first pre-charging session was user-visible
-- incorrect assumptions would persist silently
-- GPS-based reuse could infer wrong data
-- changes in infrastructure or conditions would not be detected
-- errors would compound rather than self-correct
+- the initial assumptions could be wrong
+- errors would persist silently
+- GPS-level location reuse was too coarse for reliable charging behavior
+- infrastructure or real-time conditions could change between sessions
 
-Despite its apparent simplicity, this approach optimized for convenience over correctness.
+### Option B - Validate conditions on every session
 
----
+This required more repeated work and a less elegant short-term story, but it protected correctness and reduced the chance of hidden degradation. It was selected.
 
 ## Decision
 
-**We chose to prioritize data accuracy over reuse and optimization shortcuts, even at the cost of repeated pre-charging on every plug-in.**
+> **We chose to validate charging-relevant conditions on every plug-in session rather than reuse inferred or location-based assumptions by default.**
 
-The guiding product principle behind this decision was clear:
+This explicitly prioritized:
 
-Providing the **most accurate possible data** to the energy provider (“creator”) is essential to:
-- avoid deviations during SoC monitoring
-- reduce renegotiations during charging execution
-- protect the end-to-end charging outcome
+- accuracy over convenience
+- outcome reliability over execution efficiency
+- explainability over optimization theater
 
-In practice, inaccurate inferred data creates more operational noise than it saves:
-- more deviations
-- more renegotiations
-- reduced trust from energy providers
-- degraded user experience
+## How I Led It
 
-From a product perspective, delivering a **fundamentally better service** has more long-term value than a fragile optimization.
+I worked to reframe the discussion from "how do we optimize pre-charging?" to "what design best protects the product outcome?"
 
-Executing a pre-charging step on **every plug-in** ensured that:
-- charging plans were based on real, current conditions
-- deviations were minimized rather than corrected reactively
-- both users and energy providers benefited from more predictable behavior
+That involved:
 
-This decision deliberately traded execution efficiency for correctness, stability, and trust.
+- challenging the idea that fewer execution steps automatically meant a better product
+- surfacing the long-term cost of silent inaccuracy, especially for non-technical stakeholders
+- tying the design choice back to the user promise and partner trust, not just technical elegance
+- supporting an unpopular but safer path when the more convenient option had intuitive appeal
 
----
+## Execution And Trade-Offs
 
-## Outcome
+Choosing session-based validation changed the design philosophy:
 
-### Improved Charging Accuracy
+- current session conditions became the default source of truth
+- assumption reuse became something to earn, not something to assume
+- optimization work was deferred until correctness was stronger
 
-Charging plans were consistently based on:
-- current vehicle state
-- actual grid and infrastructure conditions
-- real-time data rather than inferred assumptions
+The decision accepted:
 
-This significantly reduced SoC deviations during execution.
+- more implementation effort
+- repeated validation steps
+- a less optimized short-term interaction model
 
-### Fewer Renegotiations
+In exchange, it reduced the need for reactive correction later in the charging flow.
 
-By avoiding cached or inferred data:
-- renegotiation frequency decreased
-- charging execution became more predictable
-- operational complexity shifted from reactive correction to proactive correctness
+## Results And Evidence
 
-### Better Experience for Users and Energy Providers
+### User / customer impact
 
-For users:
-- fewer unexpected charging adjustments
-- higher confidence that the target SoC would be reached at departure time
+The charging plan was more consistently based on current conditions, which improved predictability for vehicle owners. The user impact is best described through proxy and operational evidence: fewer situations depended on stale assumptions, and charging behavior became easier to explain.
 
-For energy providers:
-- clearer, more reliable inputs
-- fewer corrective actions during charging sessions
+### Business / operational impact
 
-Overall system trust improved as behavior became more consistent and explainable.
+The decision reduced the likelihood of avoidable renegotiations and protected partner trust by improving input quality. Operationally, it shifted effort from reactive correction toward proactive correctness.
 
----
+### Leadership / influence impact
 
-## What I’d Do Differently
+This case made trade-offs explicit across product, architecture, and functional leadership. It also demonstrated the importance of resisting locally attractive optimization when the system is too variable for those assumptions to hold.
 
-- I would frame the problem earlier as **accuracy versus assumption reuse**, rather than as a technical optimization discussion.
-- I would make the long-term cost of silent inaccuracies more explicit upfront, especially to non-technical stakeholders.
-- I would introduce concrete failure scenarios earlier to illustrate how inferred data could degrade outcomes over time.
+### Evidence notes
 
----
+- Operational evidence: reduced dependence on downstream correction when current inputs were validated
+- Proxy evidence: stronger predictability and lower silent-risk exposure compared with location-based assumption reuse
+- Qualitative evidence: better alignment on why correctness was a product requirement rather than an engineering preference
 
-## Key Takeaways
+## What I Would Do Differently
 
-- Optimization based on assumptions is dangerous in highly variable systems.
-- Cached data can silently undermine product reliability.
-- In outcome-driven products, **correctness beats efficiency**.
-- Reducing renegotiations is often more valuable than reducing execution steps.
+- I would frame the choice earlier as accuracy versus assumption reuse so the real trade-off was visible from the start.
+- I would use concrete failure scenarios sooner to show how cached assumptions could silently degrade outcomes over time.
+- I would make the user-visible impact of the first pre-charging behavior more explicit earlier in stakeholder discussions.
+
+## Linked Supporting Artifacts
+
+- [Example - Assumption mapping for smart charging orchestration](../../03-discovery/assumption-mapping/example-assumption-map.md)
+- [Example - Using a prototype to reduce decision risk](../../06-prototypes-and-validations/example-prototype-to-reduce-decision-risk.md)
+- [Example - Communicating a trade-off decision](../../02-product-documentation/backlog-artifacts/alignment-docs/example-tradeoff-communication.md)
+- [Framework - Outcome over optimization](../../04-frameworks-and-playbooks/outcome-over-optimization-framework.md)
+- [Example - Applying outcome over optimization](../../04-frameworks-and-playbooks/example-outcome-over-optimization.md)
+- [KPI and success signals](../../07-strategy-and-prioritization/kpi-and-success-signals.md)

@@ -1,104 +1,65 @@
 # Outcome Over Optimization Framework
 
+## Evidence Metadata
+
+| Field | Value |
+| --- | --- |
+| Used in | [Controlled API / OCPX](../01-case-studies/case-study-controlled-api/smart-charging.md), [Pre-Charging](../01-case-studies/case-study-pre-charging/Accuracy-over-assumptions.md) |
+| Decision supported | Prioritize outcome reliability and explainability before optimization when the system is highly variable. |
+| Evidence type | Framework, Strategy, Operational |
+| Confidence level | High |
+| Outcome influenced | Better sequencing, clearer trade-offs, and stronger protection against silent failure modes. |
+
 ## Purpose
 
-This framework guides product decisions in **complex, variable systems** where:
-- outcomes matter more than process efficiency
-- incorrect assumptions are costly
-- recovery from failure is harder than preventing it
-
-It helps decide **when to prioritize outcome reliability over optimization, efficiency, or reuse**.
-
----
+This framework helps decide when to prioritize outcome reliability over optimization, efficiency, or reuse in complex systems.
 
 ## Core Principle
 
-**A system that reliably reaches the desired outcome is more valuable than a system that is optimized but unpredictable.**
+A system that reliably reaches the desired outcome is usually more valuable than a system that looks optimized but behaves unpredictably.
 
-Efficiency gains that compromise outcome reliability create hidden cost and long-term erosion of trust.
-
----
-
-## When to Use This Framework
+## When To Use It
 
 Use this framework when:
+
 - outcomes depend on multiple interacting systems
 - conditions vary between executions or sessions
-- inferred or cached assumptions are tempting but risky
+- cached or inferred assumptions are tempting but risky
 - failures surface late and are hard to recover from
-- user trust depends on predictability, not speed
-
-Typical signals:
-- frequent recovery logic or renegotiations
-- difficulty explaining system behavior to stakeholders
-- growing gap between “expected” and “actual” outcomes
-
----
-
-## When NOT to Use This Framework
-
-Do not use this framework when:
-- the problem space is stable and repeatable
-- inputs can be trusted across executions
-- failures are cheap, visible, and reversible
-- optimization directly improves user outcomes
-
-Applying this framework indiscriminately leads to over-engineering.
-
----
+- user trust depends on predictability, not just speed
 
 ## Decision Criteria
 
-When evaluating options, ask:
+Ask:
 
-1. Does this option increase the likelihood of consistently reaching the desired outcome?
-2. Does it rely on inferred, cached, or reused assumptions?
-3. If it fails, does it fail loudly or silently?
+1. Does this option increase the likelihood of reliably reaching the outcome?
+2. Does it depend on assumptions being reused across variable conditions?
+3. If it fails, will the failure be visible and recoverable?
 4. Does it reduce downstream recovery effort?
-5. Does it improve explainability to users or partners?
+5. Does it improve explainability for users or partners?
 
-If optimization weakens answers to these questions, it should be deferred.
+If optimization weakens these answers, it is probably too early.
 
----
+## Trade-Offs Explicitly Accepted
 
-## Trade-offs Explicitly Accepted
+Applying this framework means accepting:
 
-By applying this framework, you accept:
 - higher upfront complexity
 - repeated validation or execution steps
 - slower short-term delivery
 
 In exchange for:
+
 - fewer deviations and recoveries
-- higher predictability
-- increased trust from users and partners
-- lower long-term maintenance cost
+- better predictability
+- more trust from users and partners
+- lower long-term hidden cost
 
----
+## Signals To Revisit The Decision
 
-## Common Failure Modes
+Revisit the choice if:
 
-This framework fails when:
-- applied to low-risk, low-variability problems
-- optimization opportunities are ignored without evidence
-- correctness is pursued beyond what outcomes require
-- stakeholders are not aligned on the accepted trade-offs
-
----
-
-## Signals to Revisit the Decision
-
-Re-evaluate this framework if:
-- system behavior becomes significantly more predictable
-- inputs can be reliably reused without degradation
-- recovery costs become negligible
-- optimization directly improves outcome reliability
-
----
-
-## Related Case Studies
-
-- **Charging Orchestration** — prioritizing reliable target outcomes over cached optimization data  
-- **Pre-Charging Decision** — rejecting inferred location-based assumptions in favor of session-based accuracy  
-
-This framework emerged directly from decisions documented in those cases.
+- the system becomes much more predictable
+- inputs can be safely reused without degradation
+- recovery costs become low and visible
+- optimization directly improves reliability

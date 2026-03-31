@@ -1,11 +1,9 @@
 # Backlog Artifacts
 
-This folder contains examples of backlog artefacts that translate product intent into executable work **without turning the backlog into a feature factory**.
+This folder contains examples of how product intent is translated into executable work without turning the backlog into a feature factory.
 
-The goal is to demonstrate:
-- slicing by value and risk
-- explicit trade-offs and assumptions
-- outcome-oriented acceptance criteria
-- clear stakeholder intent without over-specifying implementation
+## Files
 
-These artefacts are meant to be read alongside the Case Studies and PRDs.
+- [Delivery story template](./story-template.md)
+- [Example - Sliced backlog](./example-sliced-backlog.md)
+- [Alignment docs](./alignment-docs/README.md)

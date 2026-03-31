@@ -1,101 +1,58 @@
-# Example — Using Data to Reframe the Product Problem
+# Example - Using Data To Reframe The Product Problem
 
----
+## Evidence Metadata
 
-## Decision to Be Informed
+| Field | Value |
+| --- | --- |
+| Used in | [Controlled API / OCPX](../01-case-studies/case-study-controlled-api/smart-charging.md) |
+| Decision supported | Shift focus from charging optimization depth toward execution reliability and recovery capability. |
+| Evidence type | Data analysis, Operational, Proxy |
+| Confidence level | Medium to High |
+| Outcome influenced | Prioritization, problem framing, and investment in monitoring over optimization. |
 
-Should product effort focus on:
-- further optimizing charging cost and configuration options  
-or
-- improving charging outcome reliability and predictability?
+## Decision To Be Informed
 
-This decision directly impacted:
-- product scope
-- system complexity
-- stakeholder expectations
-- long-term maintenance cost
-
----
+Should product effort focus on more charging-cost optimization and configuration depth, or on improving charging outcome reliability and predictability?
 
 ## Initial Assumption
 
-The working assumption was that:
-- users primarily value cost optimization
-- improvements in optimization logic would meaningfully improve perceived value
-- configuration flexibility was a key differentiator
+The starting belief was that:
 
-This assumption was widely accepted but weakly evidenced.
-
----
+- users primarily valued cost optimization
+- better optimization logic would create more perceived value
+- configuration flexibility was a meaningful differentiator
 
 ## Data Signals Considered
 
-Rather than focusing on aggregate usage metrics, data analysis focused on **signals related to failure and friction**, including:
+Instead of focusing on broad usage metrics, the analysis examined signals connected to value loss:
 
-- frequency of charging sessions not reaching the expected outcome
-- distribution of deviations over time during charging sessions
-- correlation between deviations and subsequent recovery actions
-- support cases and operational events tied to failed or unexpected charging behavior
+- frequency of charging sessions that missed the expected outcome
+- distribution of deviations over time during the session
+- relationship between deviations and later recovery attempts
+- support and operational events tied to failed or unexpected charging behavior
 
-The goal was not to optimize performance, but to understand **where value was actually breaking down**.
+## What The Data Showed
 
----
+The data suggested that:
 
-## What the Data Showed
-
-Data analysis revealed that:
-- a small number of failure modes accounted for a disproportionate share of negative outcomes
-- deviations occurring late in the charging session were significantly harder to recover from
-- optimization improvements had limited impact when execution became unpredictable
-- recovery mechanisms were triggered more often than expected, indicating systemic fragility
-
-Importantly, these issues were **not visible** through high-level success metrics alone.
-
----
+- a small number of failure modes drove a disproportionate share of negative outcomes
+- late-session deviations were significantly harder to recover from
+- optimization improvements had limited value when execution itself was unstable
+- recovery mechanisms were being used often enough to indicate systemic fragility
 
 ## Insight
 
-The primary source of value loss was **not suboptimal optimization**, but **unreliable execution under changing conditions**.
-
-This reframed the product problem from:
-> “How do we optimize charging better?”  
-to:
-> “How do we ensure the charging outcome is consistently reached?”
-
----
+The primary source of value loss was not weak optimization. It was unreliable execution under changing conditions.
 
 ## Decision
 
-Based on these signals, product focus shifted toward:
+The product focus shifted toward:
+
 - earlier detection of deviations
-- improving execution monitoring
-- enabling recovery and renegotiation mechanisms
-- prioritizing correctness and predictability over further optimization
+- better execution monitoring
+- recovery and renegotiation mechanisms
+- correctness and predictability before further optimization
 
-Optimization work was explicitly deprioritized until outcome reliability improved.
+## Why This Matters
 
----
-
-## Trade-offs Accepted
-
-This decision accepted:
-- slower visible feature delivery
-- less emphasis on cost-based differentiation
-- increased investment in non-user-facing capabilities
-
-In exchange for:
-- higher likelihood of reaching the desired outcome
-- reduced operational friction
-- improved trust from users and external partners
-- a more stable foundation for future optimization
-
----
-
-## Why This Belongs in Data Analysis
-
-This example demonstrates how data was used:
-- not to justify a predefined solution
-- not to produce dashboards
-- but to **reframe the product problem itself**
-
-Data served as an input to judgment, not a substitute for it.
+This example belongs in the portfolio because the analysis did not merely support a known plan. It changed the problem framing itself.

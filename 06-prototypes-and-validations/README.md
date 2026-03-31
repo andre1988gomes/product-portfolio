@@ -1,25 +1,15 @@
-# Prototypes & Validations
+# Prototypes And Validations
 
-This section documents prototypes and experiments used to **reduce uncertainty and validate direction** before committing to full delivery.
+This section contains prototypes and validation artifacts used to reduce decision risk before scaling delivery.
 
-Prototypes are treated as learning tools, not delivery artefacts.
+These artifacts are included when they helped answer a meaningful question such as:
 
----
+- is the assumption safe enough to build around?
+- does a simpler path create silent downstream risk?
+- what evidence would justify committing to a more complex design?
 
-## What Belongs Here
+## Suggested Starting Point
 
-A prototype belongs here only if it:
-- tested a critical assumption
-- reduced delivery or decision risk
-- informed a clear product decision
+- [Example - Using a prototype to reduce decision risk](./example-prototype-to-reduce-decision-risk.md)
 
----
-
-## What Does Not Belong Here
-
-This section explicitly excludes:
-- technical proofs of concept without product framing
-- exploratory prototypes with no decision outcome
-- artefacts created after the decision was already made
-
-If no decision changed, the prototype does not belong here.
+If a prototype did not change a decision, it does not belong here.

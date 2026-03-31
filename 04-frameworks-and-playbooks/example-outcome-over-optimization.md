@@ -1,76 +1,58 @@
-## Example — Applying Outcome Over Optimization
+# Example - Applying Outcome Over Optimization
 
-### Situation
+## Evidence Metadata
 
-A proposal suggested optimizing the charging execution flow by **reusing previously observed charging parameters** instead of validating conditions on every session.
+| Field | Value |
+| --- | --- |
+| Used in | [Pre-Charging](../01-case-studies/case-study-pre-charging/Accuracy-over-assumptions.md), [Controlled API / OCPX](../01-case-studies/case-study-controlled-api/smart-charging.md) |
+| Decision supported | Reject assumption reuse when it improves apparent efficiency but weakens outcome reliability. |
+| Evidence type | Framework application, Operational, Qualitative |
+| Confidence level | High |
+| Outcome influenced | Better trade-off framing and a stronger case for per-session validation. |
 
-The optimization aimed to:
+## Situation
+
+A proposal suggested reusing previously observed charging parameters instead of validating conditions on every session.
+
+The optimization appeared attractive because it would:
+
 - reduce execution steps
-- shorten perceived response time
-- lower short-term implementation complexity
-- minimize interaction with external dependencies
+- lower visible system complexity
+- improve short-term delivery speed
 
-At first glance, the approach appeared efficient and aligned with performance goals.
+## Risk Identified
 
----
+Applying the outcome-over-optimization lens exposed the real problem: cached assumptions would create a silent failure mode.
 
-### Why Optimization Was Tempting
+If those assumptions became wrong:
 
-The optimization was attractive because:
-- charging conditions often looked stable across sessions
-- failures were relatively infrequent in happy-path scenarios
-- skipping validation reduced visible system complexity
-- short-term delivery would be faster
+- errors would appear late
+- recovery options would narrow
+- failures would be harder to explain to users and partners
 
-From a local perspective, the system appeared “good enough”.
+## Decision Using The Framework
 
----
+The decision was to:
 
-### Risk Identified
+- validate charging conditions on every session
+- reject assumption reuse as the default strategy
+- accept additional execution effort upfront
+- postpone optimization until outcome reliability improved
 
-Applying the **Outcome Over Optimization** lens revealed a critical risk:
+## Trade-Off Accepted
 
-Reusing inferred or cached parameters introduced a **silent failure mode**.
+The team accepted:
 
-If assumptions became invalid:
-- errors would surface late in the charging session
-- recovery options would be limited
-- renegotiation would be harder or impossible
-- failures would be difficult to explain to users and partners
-
-The optimization reduced visibility into correctness precisely where predictability mattered most.
-
----
-
-### Decision Using the Framework
-
-Using the framework, the decision was to:
-- validate charging conditions on **every session**
-- reject assumption reuse as a default strategy
-- accept additional execution steps upfront
-- postpone optimization until outcome reliability was proven
-
-The decision explicitly prioritized **predictable outcomes** over execution efficiency.
-
----
-
-### Trade-off Accepted
-
-This choice accepted:
-- higher initial implementation complexity
-- slower short-term delivery
-- increased interaction with dependent systems
+- higher short-term complexity
+- slower visible optimization
+- more interaction with dependent systems
 
 In exchange for:
+
 - earlier detection of deviations
 - fewer late-stage failures
-- simpler recovery paths
-- improved explainability and trust
+- better explainability and trust
 
----
+## Principle Reinforced
 
-### Resulting Principle Reinforced
-
-This example reinforced the core principle of the framework:
-
-> **In variable systems, optimization that weakens outcome reliability creates hidden cost that outweighs its short-term benefits.**
+In variable systems, optimization that weakens outcome reliability creates hidden cost that outweighs its short-term benefit.

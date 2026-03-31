@@ -1,113 +1,88 @@
-# Example — Sliced Backlog (Outcome-Driven)
+# Example - Sliced Backlog (Outcome-Driven)
 
-This example shows how a complex initiative can be sliced into deliverable, testable increments while preserving outcome intent.
+## Evidence Metadata
 
-The goal is to move from:
-- **unreliable execution under dynamic conditions**
-to:
-- **predictable outcomes with controlled renegotiation**
+| Field | Value |
+| --- | --- |
+| Used in | [Controlled API / OCPX](../../01-case-studies/case-study-controlled-api/smart-charging.md) |
+| Decision supported | Sequence delivery around observability, controlled response, validated inputs, and explainability. |
+| Evidence type | Delivery artifact, Operational |
+| Confidence level | Medium to High |
+| Outcome influenced | Better execution sequencing and clearer outcome-oriented backlog structure. |
 
-All terminology is vendor-agnostic (no brand references).
+This example shows how a complex initiative can be sliced into deliverable increments while preserving the product outcome rather than fragmenting it into disconnected tickets.
 
----
+## Epic - Reliable Charging Outcome Under Dynamic Conditions
 
-## Epic: Reliable Charging Outcome Under Dynamic Conditions
+**Intent:** Ensure charging execution reaches the user-defined target despite changing conditions by detecting deviations and enabling controlled renegotiation.
 
-**Intent:** Ensure that charging execution reaches user-defined targets despite changing conditions, by detecting deviations and enabling renegotiation with external energy providers.
+## Slice 1 - Observability First
 
----
+**Title:** Detect charging plan deviations during an active session
 
-### Slice 1 — Observability First: Detect When Reality Diverges
+**User story:**  
+As charging orchestration, I want to detect deviations between the agreed plan and the real charging state, so that the target outcome can still be protected before recovery becomes difficult.
 
-**Título**: Detect charging plan deviations during an active session
+**Why it matters:**  
+Without early detection, failures surface late and the product loses the ability to act.
 
-**User Story**:  
-_As charging orchestration, I want to detect deviations between the agreed plan and the real charging state, so that we can protect the user outcome before it becomes unrecoverable._
+**Acceptance criteria**
 
-**Why it needs to be done**:  
-Without early detection, execution failures surface late and cannot be corrected, leading to missed target SoC and loss of trust.
+- [ ] Deviation detection triggers when the charging trajectory diverges beyond an agreed threshold.
+- [ ] User-setting changes relevant to execution are detected during the session.
+- [ ] Deviations are categorized in a way that supports reporting and explanation.
 
-**What needs to be done**:
-- Define what “deviation” means in product terms (e.g., SoC trajectory, unexpected setting changes).
-- Ensure deviation detection is consistent and explainable to downstream stakeholders.
-- Ensure the product can distinguish “normal variance” vs “actionable deviation”.
+## Slice 2 - Controlled Response
 
-**Acceptance Criteria (Free Form Editor checklist)**
-- [ ] **AC1** — Deviation detection triggers when SoC trajectory diverges beyond an agreed threshold. (Status: Not Started | Assignee: PO/Team | Priority: P0)
-- [ ] **AC2** — Deviation detection triggers when user settings relevant to the plan change during execution. (Status: Not Started | Assignee: PO/Team | Priority: P0)
-- [ ] **AC3** — Deviations are recorded with a reason category usable for reporting and stakeholder explanation. (Status: Not Started | Assignee: PO/Team | Priority: P1)
+**Title:** Request renegotiation when deviations are detected
 
----
+**User story:**  
+As charging orchestration, I want to trigger renegotiation with the provider when actionable deviations occur, so that the plan can still be adapted toward the target outcome.
 
-### Slice 2 — Controlled Response: Trigger Renegotiation When Needed
+**Why it matters:**  
+Detection without response only creates alerts. The product needs a way to recover.
 
-**Título**: Request renegotiation when deviations are detected
+**Acceptance criteria**
 
-**User Story**:  
-_As charging orchestration, I want to request renegotiation from the energy provider when deviations occur, so that the plan can be adjusted to still reach the target outcome._
+- [ ] Actionable deviations trigger a renegotiation request.
+- [ ] The system degrades safely if the provider does not respond in time.
+- [ ] Renegotiation includes enough context for an updated plan.
 
-**Why it needs to be done**:  
-Deviation detection without response only creates alerts. Renegotiation is the mechanism to recover the outcome.
+## Slice 3 - Validated Inputs
 
-**What needs to be done**:
-- Ensure renegotiation requests are triggered only for actionable events.
-- Ensure renegotiation is resilient to provider latency or partial failure.
-- Ensure renegotiation preserves the primary user goal (target SoC by departure time).
+**Title:** Ensure every charging session uses current validated inputs
 
-**Acceptance Criteria (Free Form Editor checklist)**
-- [ ] **AC1** — When an actionable deviation is detected, a renegotiation request is triggered to the provider. (Status: Not Started | Assignee: PO/Team | Priority: P0)
-- [ ] **AC2** — If the provider does not respond within an agreed time window, the system degrades safely (e.g., fallback behavior defined). (Status: Not Started | Assignee: PO/Team | Priority: P0)
-- [ ] **AC3** — Renegotiation requests include sufficient context for the provider to compute an updated plan. (Status: Not Started | Assignee: PO/Team | Priority: P1)
+**User story:**  
+As charging orchestration, I want each session to rely on current validated data instead of cached assumptions, so that execution remains predictable across variable conditions.
 
----
+**Why it matters:**  
+Cached assumptions reduce visible effort upfront but create silent risk later.
 
-### Slice 3 — Trust & Predictability: Prevent Silent Assumption Reuse
+**Acceptance criteria**
 
-**Título**: Ensure every charging session uses current, validated inputs
+- [ ] Planning inputs come from current session state, not prior-location snapshots.
+- [ ] The system does not proceed with a plan that assumes correctness when critical inputs cannot be validated.
+- [ ] Fallback behavior is visible and explainable when validation cannot be completed.
 
-**User Story**:  
-_As charging orchestration, I want each charging session to rely on current validated data instead of cached assumptions, so that execution remains predictable across variable conditions._
+## Slice 4 - Explainability
 
-**Why it needs to be done**:  
-Cached assumptions are a silent failure mode: they reduce renegotiations in the short term but increase deviations and trust erosion over time.
+**Title:** Provide explainable deviation and renegotiation insights
 
-**What needs to be done**:
-- Ensure inputs used for planning reflect current session conditions.
-- Ensure the system can explain why a plan was accepted or rejected.
-- Reduce renegotiations by increasing correctness upfront, not by hiding variance.
+**User story:**  
+As an internal or external stakeholder, I want explainable insights about deviations and renegotiations, so that I can understand system behavior and improve decisions over time.
 
-**Acceptance Criteria (Free Form Editor checklist)**
-- [ ] **AC1** — Planning inputs used for a session are derived from current session state, not prior-location snapshots. (Status: Not Started | Assignee: PO/Team | Priority: P0)
-- [ ] **AC2** — If critical inputs cannot be validated, the session does not proceed with a plan that assumes correctness. (Status: Not Started | Assignee: PO/Team | Priority: P0)
-- [ ] **AC3** — The system exposes a reason when pre-validation could not be performed and what fallback was used. (Status: Not Started | Assignee: PO/Team | Priority: P1)
+**Why it matters:**  
+A technically correct system still fails organizationally if no one can understand or trust its behavior.
 
----
+**Acceptance criteria**
 
-### Slice 4 — Stakeholder Clarity: Explainability and Reporting
+- [ ] Deviations are grouped by category over time.
+- [ ] Renegotiations are traceable to initiating events and outcomes.
+- [ ] Stakeholders can distinguish provider-caused from vehicle- or system-caused renegotiations.
 
-**Título**: Provide explainable renegotiation and deviation insights
+## Notes On Slicing Strategy
 
-**User Story**:  
-_As a stakeholder (internal or external), I want explainable insights about deviations and renegotiations, so that I can understand behavior, improve integrations, and reduce operational friction._
-
-**Why it needs to be done**:  
-A technically correct system still fails if stakeholders cannot understand or trust its behavior.
-
-**What needs to be done**:
-- Provide consistent categories for deviation causes.
-- Provide visibility into renegotiation frequency and reasons.
-- Enable data-driven discussions with external partners.
-
-**Acceptance Criteria (Free Form Editor checklist)**
-- [ ] **AC1** — Deviations are grouped by category with counts over time. (Status: Not Started | Assignee: PO/Team | Priority: P1)
-- [ ] **AC2** — Renegotiations are traceable to initiating events and outcomes. (Status: Not Started | Assignee: PO/Team | Priority: P1)
-- [ ] **AC3** — Stakeholders can distinguish provider-caused vs vehicle/system-caused renegotiations. (Status: Not Started | Assignee: PO/Team | Priority: P2)
-
----
-
-## Notes on Slicing Strategy
-
-- Start with observability, then add controlled response.
+- Start with visibility, then add controlled response.
 - Prefer slices that reduce silent failure modes early.
 - Keep each slice independently testable and outcome-aligned.
-- Avoid over-specifying implementation; focus on behavior and guarantees.
+- Avoid over-prescribing implementation when the behavior and guarantees are the real product requirement.

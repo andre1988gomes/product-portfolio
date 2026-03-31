@@ -1,84 +1,56 @@
-# Decision Record — <Short Decision Title>
+# Decision Record Template
+
+## Evidence Metadata
+
+| Field | Value |
+| --- | --- |
+| Used in | Reusable across decision records in this portfolio |
+| Decision supported | Capture reasoning when a product decision is costly to reverse or strategically important. |
+| Evidence type | Template |
+| Confidence level | High |
+| Outcome influenced | Better traceability of trade-offs and decisions over time. |
 
 **Status:** <Proposed | Accepted | Superseded>  
 **Date:** <YYYY-MM-DD>  
-**Decision Owner:** <Role, not name>
-
----
+**Decision Owner:** <Role>
 
 ## Context
 
-Describe the situation that required a decision.
-
-Include:
-- why a decision was needed
-- what triggered the decision
-- what would happen if no decision was made
-
-Avoid solution details at this stage.
-
----
+Describe the situation that required a decision and what would happen if nothing changed.
 
 ## Decision Drivers
 
-List the factors that most strongly influenced the decision.
-
-Examples:
 - outcome reliability
-- risk reduction
-- ownership and autonomy
-- user trust
+- user value
 - delivery constraints
-- long-term maintainability
-
----
+- ownership and autonomy
+- risk reduction
 
 ## Options Considered
 
-### Option A — <Short description>
+### Option A - <Short description>
 
-- Why this option was viable
-- What it optimized for
-- Key risks introduced
+- what made it viable
+- what it optimized for
+- key risks introduced
 
-### Option B — <Short description>
+### Option B - <Short description>
 
-- Why this option was viable
-- What it optimized for
-- Key risks introduced
-
-(Include more options only if they were seriously considered.)
-
----
+- what made it viable
+- what it optimized for
+- key risks introduced
 
 ## Decision
 
-**State the decision clearly in one sentence.**
-
-Explain:
-- which trade-offs were accepted
-- which risks were prioritized or avoided
-- how the decision aligns with the desired outcome
-
----
+State the decision clearly in one sentence, then explain the trade-offs and risks accepted.
 
 ## Consequences
 
-Describe the expected consequences of this decision.
-
-Include:
 - benefits gained
 - costs accepted
-- new risks introduced
+- risks introduced
 - dependencies created or removed
-
-Be honest and explicit.
-
----
 
 ## Notes
 
-Capture:
-- dissenting opinions
-- open questions
-- conditions under which this decision should be revisited
+Document dissent, review conditions, or follow-up questions where relevant.

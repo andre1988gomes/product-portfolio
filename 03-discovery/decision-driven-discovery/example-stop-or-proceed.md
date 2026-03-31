@@ -1,99 +1,56 @@
-# Example — Stopping Discovery and Committing to a Pivot
+# Example - Stopping Discovery And Committing To A Pivot
 
----
+## Evidence Metadata
 
-## Decision to Be Made
+| Field | Value |
+| --- | --- |
+| Used in | [Discovery Pivot](../../01-case-studies/case-study-discovery-pivot/case-study.md) |
+| Decision supported | Stop discovery once the evidence is sufficient and pivot the initiative toward the adjacent validated problem. |
+| Evidence type | Discovery artifact, Qualitative, Operational |
+| Confidence level | High |
+| Outcome influenced | Faster commitment to the pivot and less wasted discovery after the decision was clear. |
 
-Should the initiative proceed with the originally scoped direction — focused on improving charging optimization and configuration — or should the problem framing shift toward improving charging outcome reliability?
+## Decision To Be Made
 
-This decision determined whether effort would go into:
-- enhancing optimization logic and configuration options  
-or
-- strengthening monitoring, control, and recovery mechanisms during charging execution
-
----
+Should the initiative continue with the original direction, centered on optimization and configuration, or should it pivot toward improving charging outcome reliability?
 
 ## Decision-Critical Unknowns
 
-The decision depended on answering three critical questions:
-
-- Do users experience charging configuration or optimization as a primary pain point?
-- Would users meaningfully change behavior if additional optimization features were introduced?
-- Is perceived friction in setup significant enough to justify added complexity in the system?
-
-If these assumptions were wrong, the initiative risked optimizing the wrong layer of the problem.
-
----
+- Do users experience optimization or configuration as a primary pain point?
+- Would additional optimization features change their behavior?
+- Is setup friction severe enough to justify more system complexity?
 
 ## Exit Criterion Defined Upfront
 
-Before starting discovery, we agreed that discovery would stop if:
+Discovery would stop if:
 
-- users consistently described a different problem as more painful than configuration or optimization
-- users explicitly stated they would not engage with additional controls or settings
-- signals converged across multiple sources (qualitative and behavioral)
-
-The goal was not to gather exhaustive insight, but to reach a **clear decision point**.
-
----
-
-## Discovery Signals Collected
-
-Discovery focused on real charging experiences rather than hypothetical feature interest:
-
-- qualitative interviews with active users, centered on recent charging sessions
-- analysis of behavioral and operational data related to charging failures and deviations
-- end-to-end journey mapping from plug-in to departure time
-
-Signals were evaluated based on consistency, not volume.
-
----
+- users consistently described a different problem as more painful
+- users explicitly showed low willingness to engage with more controls
+- signals converged across interviews, behavior, and operational evidence
 
 ## Signal Convergence
 
-Signals converged quickly and consistently:
+Signals converged quickly:
 
-- charging configuration was not perceived as a primary pain point
+- configuration depth was not the decisive issue
 - users tolerated limited setup friction
-- the dominant source of frustration was **unreliable charging outcomes**
-- users expressed low willingness to adopt additional configuration if outcomes remained unpredictable
-
-At this point, additional discovery was unlikely to change the decision.
-
----
+- unreliable outcomes were the dominant frustration
+- additional discovery was unlikely to change the decision
 
 ## Decision
 
-Discovery was stopped.
+Discovery was stopped and the initiative pivoted toward:
 
-The original direction was abandoned, and the initiative pivoted toward:
-- improving charging execution monitoring
-- detecting deviations earlier
-- enabling recovery mechanisms to protect the target charging outcome
+- better monitoring
+- earlier deviation detection
+- stronger recovery behavior
 
-This reframing shifted the product focus from:
-> “better optimization”  
-to:
-> “reliable outcomes under changing conditions”
+## Trade-Offs Accepted
 
----
-
-## Trade-offs Accepted
-
-This decision explicitly accepted:
-- short-term delivery disruption
+- short-term disruption to delivery plans
 - rework of previously agreed scope
-- stakeholder discomfort due to changed direction
-
-In exchange for:
-- a higher likelihood of meaningful user impact
-- reduced risk of shipping low-value or misleading functionality
-- stronger alignment with real user priorities
-
----
+- stakeholder discomfort caused by changing direction
 
 ## Key Learning
 
-Discovery discipline is not about learning more.
-
-It is about recognizing when **learning is sufficient to decide**, and having the courage to stop discovery and commit — even when that means changing direction.
+Discovery discipline is not about learning forever. It is about recognizing when the evidence is already strong enough to decide.

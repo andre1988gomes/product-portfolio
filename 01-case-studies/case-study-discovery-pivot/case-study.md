@@ -1,162 +1,168 @@
-# Case Study — Pivoting Product Direction After Invalidating a Core Assumption  
-**Choosing problem redefinition over roadmap delivery**
+# Case Study - Pivoting Product Direction After Invalidating A Core Assumption
+**Choosing problem redefinition over roadmap comfort when the original premise did not hold up**
 
----
+## Snapshot
 
-## Context
+| Field | Value |
+| --- | --- |
+| Role | Product Owner / Product Manager |
+| Domain | Digital product workflow improvement |
+| Users / customers | Existing active users inside a mature workflow |
+| Scope / complexity | Fixed delivery window, limited early discovery, committed roadmap expectations, and multiple internal stakeholders |
+| Timeframe | Decision made during a live initiative rather than before roadmap commitment |
+| Evidence type | Qualitative, Operational, Proxy |
+| Key result | Redirected effort away from low-value scope toward a validated adjacent problem, improving expected impact and protecting product credibility. |
 
-### Problem Space
+## Problem And Why It Mattered
 
-A product initiative was launched to address a perceived user problem that had repeatedly surfaced through indirect signals such as:
-- stakeholder feedback
-- feature requests
-- anecdotal evidence
-- roadmap inputs
+An initiative had already entered the roadmap based on repeated indirect signals such as feature requests, stakeholder feedback, and anecdotal pain points. The default path would have been to deliver the agreed scope and preserve predictability.
 
-Based on these signals, the initiative was positioned as a meaningful value driver and included in the roadmap **before in-depth discovery had been completed**.
+The risk was that the team could execute well on the wrong problem. In a mature product, that is expensive in two ways:
 
-**Product context**
-- Digital product feature aimed at improving user efficiency  
-- Target users: existing active users within a specific workflow  
-- Environment: mature product with an established user base  
+- it consumes delivery capacity without changing user behavior
+- it weakens trust in roadmap decisions when the value never materializes
 
-### Why This Was Hard
+This became a senior PM problem because the real challenge was not feature design. It was deciding whether to protect the plan or protect the product.
 
-Several factors increased the risk of moving in the wrong direction:
-- the problem framing was treated as “good enough” due to repeated high-level signals
-- roadmap commitments already existed
-- discovery capacity was limited upfront
-- there was pressure to deliver visible value within a fixed time window
+## User / Customer Context
 
-This created tension between validating the problem and executing on an already accepted plan.
+The original assumption was that users saw a particular workflow friction as a major pain point and would adopt additional functionality to improve it.
 
-### Stakeholders
+Discovery showed something more important:
 
-**External**
-- Existing active users of the product
+- the targeted friction existed, but users did not rank it as a decisive problem
+- users tolerated the current state more than stakeholders expected
+- a different adjacent problem surfaced repeatedly as more painful and more time-consuming
 
-**Internal**
-- Product leadership
-- Stakeholders contributing roadmap inputs
-- Delivery teams aligned to committed timelines
+Several users were explicit that the proposed solution would not materially change their behavior.
 
----
+## Business Context
+
+The initiative already had organizational momentum:
+
+- it had roadmap visibility
+- it had stakeholder backing
+- it was expected to produce a visible delivery outcome inside a fixed window
+
+Changing direction therefore carried real cost:
+
+- stakeholder discomfort
+- rework of plans and success criteria
+- short-term loss of roadmap certainty
+
+But shipping low-impact scope would have been worse. It would have spent credibility to preserve a narrative rather than create value.
 
 ## Constraints
 
-The initiative operated under multiple constraints:
+The decision had to happen under pressure:
 
-- a fixed delivery window
-- limited opportunity for extensive upfront discovery
-- existing roadmap commitments that assumed a predefined solution
-- expectation of a tangible outcome rather than exploratory learning
+- there was a fixed delivery window
+- discovery capacity was limited upfront
+- the existing roadmap framing assumed a predefined solution
+- stakeholders expected delivery, not just learning
 
-These constraints reduced flexibility and increased the cost of changing direction once delivery had started.
-
----
+These constraints made it tempting to treat discovery as confirmation rather than decision support.
 
 ## Options Considered
 
-### Option A — Proceed as Planned
+### Option A - Proceed as planned
 
-Deliver the originally scoped feature based on the initial assumption.
+This protected the roadmap and minimized stakeholder disruption.
 
-**Short-term benefits**
-- protects roadmap commitments
-- minimizes stakeholder disruption
-- avoids rework
+It was rejected because discovery showed low expected adoption and weak alignment with real user pain.
 
-**Why it was rejected**
-- discovery showed low expected adoption
-- weak alignment with actual user pain
-- high risk of delivering low-impact functionality
+### Option B - Reduce scope but keep the same problem framing
 
----
+This lowered delivery cost while keeping the initiative alive.
 
-### Option B — Reduce Scope
+It was rejected because the core assumption was still wrong. A smaller solution to the wrong problem would still be low impact.
 
-Ship a lighter version of the planned feature.
+### Option C - Pivot to an adjacent validated problem
 
-**Short-term benefits**
-- lower delivery cost
-- faster release
+This introduced short-term discomfort, but it offered stronger user relevance and better expected value. It was selected because it used the learning rather than ignoring it.
 
-**Why it was rejected**
-- core assumption remained invalid
-- reduced scope did not address the real user problem
+### Option D - Cancel the initiative entirely
 
----
-
-### Option C — Pivot to an Adjacent Problem (Selected)
-
-Redirect effort towards a different, adjacent problem consistently identified by users during discovery.
-
-**Short-term benefits**
-- higher expected user value
-- stronger alignment with real pain points
-
-**Trade-offs**
-- breaks the original plan
-- requires stakeholder re-alignment
-- introduces short-term delivery discomfort
-
----
-
-### Option D — Cancel the Initiative
-
-Stop delivery entirely.
-
-**Short-term benefits**
-- avoids further waste
-
-**Why it was rejected**
-- discovery revealed a clear opportunity to redirect effort meaningfully
-- complete cancellation would forfeit validated learning and momentum
-
----
+This would have avoided further waste, but it was rejected because discovery had uncovered a stronger adjacent opportunity worth pursuing.
 
 ## Decision
 
-**We chose to pivot the initiative towards a validated adjacent user problem, even though it required redefining scope, success criteria, and stakeholder expectations.**
+> **We chose to pivot the initiative toward a validated adjacent problem and redefine success criteria, even though it disrupted the original roadmap plan.**
 
-This decision deliberately traded:
-- roadmap predictability  
-for  
-- alignment with real user needs and long-term product value
+This decision traded:
 
-The initiative was reframed from *“solution delivery”* to *“problem redefinition”*.
+- short-term predictability
 
----
+for
 
-## Outcome
+- higher expected user value
+- better strategic alignment
+- stronger long-term credibility in product decision-making
 
-Discovery invalidated the original core assumption:
+## How I Led It
 
-- users did not perceive the targeted workflow as a primary problem
-- while some friction existed, it was not decisive in their overall experience
-- users consistently highlighted a different, adjacent problem as significantly more painful and time-consuming
+My role was to keep discovery tied to a real decision and then carry that decision through stakeholder discomfort.
 
-In several interviews, users explicitly stated that they would **not change their behaviour** for the originally proposed solution, even if it were available.
+That meant:
 
-By pivoting:
-- effort was redirected to a problem users actively cared about
-- expected adoption and impact increased
-- the product avoided shipping functionality with low perceived value
+- treating repeated signals as hypotheses rather than evidence
+- defining the critical assumption that needed to be tested
+- using discovery to answer "should we continue?" rather than "how do we polish the current plan?"
+- communicating the pivot as a decision-quality win rather than a delivery failure
 
-The pivot was explicitly communicated as a **discovery-driven decision**, supported by qualitative insights and behavioural data.
+The leadership challenge was not gathering more input. It was helping stakeholders accept that changing direction was the more responsible choice.
 
----
+## Execution And Trade-Offs
 
-## What I’d Do Differently
+Once the assumption was invalidated, the work changed in several ways:
 
-- I would challenge indirect signals (feature requests, anecdotal feedback) earlier instead of treating repetition as validation.
-- I would make the **assumption itself** more explicit to stakeholders before it became embedded in roadmap commitments.
-- I would frame discovery earlier as a decision gate, not as a validation step for a pre-selected solution.
+- scope had to be redefined around the adjacent problem
+- success criteria had to shift from feature delivery to outcome relevance
+- stakeholders had to be re-aligned on why the original plan no longer made sense
 
----
+We explicitly accepted:
 
-## Key Takeaways
+- disruption to the current plan
+- discomfort in reworking previously agreed scope
+- the perception of slower visible delivery in the short term
 
-- Repeated signals are not the same as validated problems.
-- Discovery can invalidate direction, not just refine solutions.
-- Pivoting early, even under roadmap pressure, is often cheaper than delivering the wrong thing well.
+We deliberately did not:
+
+- force the original solution through to protect roadmap optics
+- dilute the learning into a minor optimization request
+- continue discovery after the decision had already become clear
+
+## Results And Evidence
+
+### User / customer impact
+
+The initiative moved toward a problem users consistently described as more painful and more worth solving. The clearest evidence was qualitative: users did not signal meaningful enthusiasm for the original direction, but they repeatedly emphasized the adjacent issue.
+
+### Business / operational impact
+
+The pivot reduced the risk of spending delivery capacity on low-adoption functionality. It also improved the quality of roadmap decision-making by making it clear that repeated anecdotal signals were not enough to justify scope on their own.
+
+### Leadership / influence impact
+
+The outcome strengthened the role of discovery as a decision gate rather than a ritual. It also required stakeholder re-alignment: the team had to move from "protect the plan" to "protect the product outcome."
+
+### Evidence notes
+
+- Qualitative evidence: repeated user statements that the original problem was secondary
+- Operational evidence: roadmap and scope were explicitly reworked after the learning
+- Proxy evidence: higher expected adoption and relevance based on the strength and consistency of the adjacent pain point
+
+## What I Would Do Differently
+
+- I would challenge indirect signals earlier instead of allowing repetition to create false confidence.
+- I would make the critical assumption more explicit before it became embedded in the roadmap.
+- I would frame discovery earlier as a go / pivot / stop decision instead of allowing it to be interpreted as solution validation.
+- I would create stakeholder air cover sooner for the possibility that the outcome of discovery could be a direction change.
+
+## Linked Supporting Artifacts
+
+- [Example - Invalidating a core assumption through discovery](../../03-discovery/example-invalidated-assumption.md)
+- [Example - Stopping discovery and committing to a pivot](../../03-discovery/decision-driven-discovery/example-stop-or-proceed.md)
+- [Framework - Decision-driven discovery](../../03-discovery/decision-driven-discovery/decision-driven-discovery-framework.md)
+- [Discovery signals cheatsheet](../../03-discovery/discovery-signals-cheatsheet.md)
+- [Strategy memo - Moving from roadmap confidence to problem confidence](../../07-strategy-and-prioritization/strategy-memo-problem-confidence-before-commitment.md)

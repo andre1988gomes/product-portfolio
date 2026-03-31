@@ -1,11 +1,8 @@
 # Decision-Driven Discovery
 
-This framework treats product discovery as a **decision boundary**, not as an ongoing activity stream.
+This folder contains a compact framework and example for treating discovery as a decision boundary rather than an endless activity stream.
 
-Discovery exists to enable a decision.
-Once the decision can be made responsibly, discovery must stop.
+## Files
 
-This approach prevents:
-- analysis paralysis
-- discovery theatre
-- postponing accountability behind “more research”
+- [Decision-driven discovery framework](./decision-driven-discovery-framework.md)
+- [Example - Stopping discovery and committing to a pivot](./example-stop-or-proceed.md)

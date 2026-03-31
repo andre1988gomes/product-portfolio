@@ -1,10 +1,8 @@
 # Assumption Mapping
 
-Assumption mapping is used here as a **risk management tool**, not as a brainstorming exercise.
+This folder contains a framework and example for using assumption mapping as a risk-management tool rather than a workshop exercise.
 
-The purpose is to:
-- make hidden assumptions explicit
-- identify which assumptions threaten product viability
-- focus discovery on what can invalidate direction early
+## Files
 
-Assumptions are treated as hypotheses that must earn their way into delivery.
+- [Assumption mapping framework](./assumption-mapping-framework.md)
+- [Example - Assumption mapping for smart charging orchestration](./example-assumption-map.md)

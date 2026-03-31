@@ -1,11 +1,8 @@
 # Alignment Documents
 
-This folder contains short-form documents used to **create and maintain alignment** across stakeholders with different incentives, levels of context, and risk tolerance.
+This folder contains short documents used to create alignment across stakeholders when trade-offs, non-goals, and risks need to be made explicit.
 
-These documents exist to:
-- surface trade-offs early
-- make disagreements explicit
-- reduce misalignment before it turns into delivery friction
-- support difficult or counterintuitive product decisions
+## Files
 
-Alignment is treated as an ongoing product responsibility, not a one-time activity.
+- [Stakeholder alignment brief template](./stakeholder-alignment-brief.md)
+- [Example - Communicating a trade-off decision](./example-tradeoff-communication.md)

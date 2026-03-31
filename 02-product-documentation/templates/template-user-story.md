@@ -1,58 +1,35 @@
-# User Story: <Short descriptive title>
+# User Story Template
+
+## Evidence Metadata
+
+| Field | Value |
+| --- | --- |
+| Used in | Reusable across execution artifacts in this portfolio |
+| Decision supported | Translate product intent into a concise story format without losing context or outcome focus. |
+| Evidence type | Template |
+| Confidence level | High |
+| Outcome influenced | Clearer delivery handoff and better acceptance criteria quality. |
+
+## Title
+
+One short descriptive sentence.
 
 ## User Story
-As a <persona / actor>,  
-I want <capability or behaviour>,  
+
+As a <persona or actor>,  
+I want <capability or behavior>,  
 so that <benefit or outcome>.
 
----
+## Why It Needs To Be Done
 
-## Context
-Provide background information needed to understand this story.
+Explain the product reason this work exists. Keep the focus on user value, risk reduction, or business impact.
 
-- Related problem or opportunity:
-- Dependencies:
-- Assumptions:
+## What Needs To Be Done
 
----
+Describe the expected product behavior and decision boundaries. Do not prescribe implementation.
 
 ## Acceptance Criteria
-List the conditions that must be met for this story to be considered complete.
 
-- [ ] Criterion 1
-- [ ] Criterion 2
-- [ ] Criterion 3
-
----
-
-## Non-Goals
-Explicitly state what is out of scope.
-
-- …
-- …
-
----
-
-## Edge Cases and Exceptions
-Describe known edge cases or error scenarios.
-
-- …
-- …
-
----
-
-## Metrics / Validation
-Explain how the success of this story will be evaluated.
-
-- Metric(s):
-- Expected behaviour or impact:
-
----
-
-## Notes
-Additional information for engineering or stakeholders.
-
-- Design references
-- Technical considerations
-- Open questions
-
+- [ ] AC1 - <criterion>
+- [ ] AC2 - <criterion>
+- [ ] AC3 - <criterion>

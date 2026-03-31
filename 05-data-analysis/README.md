@@ -1,26 +1,15 @@
 # Data Analysis
 
-This section contains examples where **data directly informed a product decision**.
+This section contains examples where data informed a product decision, changed problem framing, or helped prioritize what to fix first.
 
-Data is not presented as dashboards or metrics for their own sake.
-Each artefact exists to answer a specific question or reduce decision risk.
+The emphasis is not on dashboards or reporting. It is on how evidence was used in judgment:
 
----
+- to support or challenge a product belief
+- to distinguish visible symptoms from underlying value loss
+- to decide whether to continue, pivot, or invest
 
-## What Belongs Here
+## Suggested Starting Point
 
-Data analysis is included only when it:
-- supported a stop, pivot, or proceed decision
-- invalidated or confirmed a critical assumption
-- changed product direction, scope, or priority
+- [Example - Using data to reframe the product problem](./example-data-informed-decision.md)
 
----
-
-## What Does Not Belong Here
-
-This section explicitly excludes:
-- vanity metrics
-- dashboards without decisions
-- analysis that did not influence product direction
-
-Data without a decision is noise.
+Data belongs here only when it changed a decision or materially improved decision quality.

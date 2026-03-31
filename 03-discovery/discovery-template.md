@@ -1,76 +1,42 @@
-# Discovery Brief — <Initiative / Problem Space>
+# Discovery Brief Template
 
----
+## Evidence Metadata
 
-## Purpose of Discovery
+| Field | Value |
+| --- | --- |
+| Used in | Reusable across discovery artifacts in this portfolio |
+| Decision supported | Tie discovery to a concrete decision before evidence collection begins. |
+| Evidence type | Template |
+| Confidence level | High |
+| Outcome influenced | Better discovery discipline and clearer decision boundaries. |
+
+## Purpose Of Discovery
 
 What decision is this discovery meant to inform?
 
 Examples:
-- proceed / pivot / stop
-- reframe problem
-- change target user
-- deprioritize initiative
 
-If no decision is expected, discovery should not start.
-
----
+- proceed, pivot, or stop
+- reframe the problem
+- change the target user
+- deprioritize the initiative
 
 ## Key Assumptions
 
-List the assumptions that must hold true for this initiative to succeed.
-
-Focus on:
-- user behavior
-- problem severity
-- willingness to change
-- feasibility under constraints
-
----
+List the assumptions that must hold for the initiative to succeed.
 
 ## Highest-Risk Assumption
 
 Which assumption, if wrong, would invalidate the initiative?
 
-Explain why.
-
----
-
 ## Discovery Activities
 
-Only include activities that directly test assumptions.
+Only include activities that directly test those assumptions.
 
-Examples:
-- targeted user interviews
-- behavioral data review
-- workflow mapping
-- shadowing or real-world observation
+## Signals To Look For
 
-Avoid activity checklists.
-
----
-
-## Signals to Look For
-
-What evidence would:
-- support the assumption?
-- invalidate it?
-
-Be explicit about disconfirming signals.
-
----
+What evidence would support the assumption? What evidence would invalidate it?
 
 ## Decision Outcome
 
 What decision was made based on discovery?
-
-Examples:
-- proceed as planned
-- pivot to adjacent problem
-- stop the initiative
-
----
-
-## Notes
-
-Capture surprises, contradictions, or unresolved questions.

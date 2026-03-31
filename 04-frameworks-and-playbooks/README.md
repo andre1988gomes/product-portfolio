@@ -1,28 +1,16 @@
-# Frameworks & Playbooks
+# Frameworks And Playbooks
 
-This section contains **opinionated product frameworks** derived from real product decisions documented in this repository.
+This section contains compact frameworks that emerged from real product decisions in the portfolio. They are included because they helped improve judgment and communication, not because every product team needs another generic canvas.
 
-These frameworks are not theoretical models or best-practice summaries.
-They exist because they helped resolve concrete product problems under uncertainty, technical constraints, and stakeholder pressure.
+## What You Will Find Here
 
----
+- frameworks grounded in real cases rather than theory alone
+- examples showing how those frameworks changed an actual decision
+- concise tools for discussing trade-offs with stakeholders and teams
 
-## What Belongs Here
+## Suggested Starting Points
 
-A framework belongs in this section only if it:
-- is grounded in at least one real case study
-- encodes a repeatable decision pattern
-- makes trade-offs explicit
+- [Framework - Outcome over optimization](./outcome-over-optimization-framework.md)
+- [Example - Applying outcome over optimization](./example-outcome-over-optimization.md)
 
-Frameworks are treated as **decision support tools**, not processes.
-
----
-
-## What Does Not Belong Here
-
-This section explicitly excludes:
-- generic product frameworks
-- canvases without context
-- models copied from books or blogs
-
-If a framework cannot point to a real decision, it does not belong here.
+If a framework cannot be traced back to a real decision in this portfolio, it does not belong here.

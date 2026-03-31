@@ -1,117 +1,85 @@
 # Product Principles
 
-These principles define how product decisions are made across the work presented in this repository.
+These principles explain the decision logic behind the case studies, frameworks, and supporting evidence in this portfolio.
 
-They are not aspirational statements.
-They are **constraints on decision-making**, validated through real product work in complex, technical, and outcome-driven environments.
-
-They explain *why* the artefacts, case studies, and frameworks in this repository look the way they do.
-
----
+They are not aspirational statements. They are operating constraints that I use when product decisions involve uncertainty, delivery pressure, technical complexity, or conflicting stakeholder incentives.
 
 ## 1. Outcomes Matter More Than Control
 
-In automated and technical systems, users ultimately care about **what happens**, not how many options they can configure.
+In automated and technical systems, users usually care more about what reliably happens than how many options they can configure.
 
 Additional control often:
+
 - increases cognitive load
 - shifts responsibility to the user
-- hides underlying reliability problems
+- hides deeper reliability problems
 
-When forced to choose, I prioritize **reliable outcomes** over configurability.
+When trade-offs are unavoidable, I prioritize reliable outcomes over configurability.
 
----
+## 2. Accuracy Beats Optimization In Variable Systems
 
-## 2. Accuracy Beats Optimization in Variable Systems
+In high-variability systems, shortcuts such as inferred data, cached assumptions, or premature optimization often create silent failure modes.
 
-In systems with high variability, shortcuts such as:
-- inferred data
-- cached assumptions
-- one-time optimizations
+Repeated validation is usually cheaper than recovery after the fact. Optimization becomes valuable once predictability exists, not before.
 
-tend to silently degrade outcomes.
+## 3. Discovery Exists To Enable Decisions
 
-Repeated validation and correctness are usually cheaper than recovering from failure.
-Optimization only becomes valuable once predictability is established.
-
----
-
-## 3. Discovery Exists to Enable Decisions
-
-Discovery is not an activity stream.
-It exists to support a **specific decision**.
+Discovery is not an activity stream. It exists to support a specific decision.
 
 Discovery is complete when:
-- core assumptions are validated or invalidated
-- remaining uncertainty is delivery-related
+
+- the core assumptions are validated or invalidated
+- the remaining uncertainty is mainly delivery-related
 - further learning is unlikely to change direction
 
-Continuing discovery beyond this point delays value and accountability.
-
----
+Continuing beyond that point delays value and blurs accountability.
 
 ## 4. Assumptions Are Risks Until Proven Otherwise
 
-The most dangerous assumptions are those that:
-- feel obvious
-- are widely repeated
-- remain untested
+The most dangerous assumptions are the ones that feel obvious, circulate widely, and go untested.
 
-Assumptions are treated as risks that must earn their way into delivery through evidence, not alignment.
+I treat assumptions as risks that must earn their way into delivery through evidence, not alignment alone.
 
----
+## 5. Own The Execution Path When Accountable For Outcomes
 
-## 5. Own the Execution Path When Accountable for Outcomes
+If a product is accountable for an outcome, it should own the execution path that produces it where feasible.
 
-If a product is accountable for an outcome, it must own the execution path that produces it — where feasible.
+Reducing dependency-driven uncertainty:
 
-Reducucing dependency-driven uncertainty:
 - increases predictability
-- enables faster recovery
+- shortens recovery loops
 - preserves long-term autonomy
 
-Ownership is a strategic product decision, not a technical preference.
+Ownership is a strategic product decision, not just a technical preference.
 
----
+## 6. Make Trade-Offs Explicit, Not Implicit
 
-## 6. Make Trade-offs Explicit, Not Implicit
-
-Every product decision involves trade-offs.
-
-The real risk lies in **implicit trade-offs**, where priorities are assumed but never discussed.
+Every product decision creates trade-offs. The real risk is leaving those trade-offs implicit.
 
 I aim to:
+
 - surface trade-offs early
-- make them explicit and discussable
-- document what is being prioritized — and what is not
+- document what is being prioritized
+- make non-goals visible
+- create alignment around the costs being accepted
 
-Clarity beats false alignment.
+Clarity is more useful than false consensus.
 
----
+## 7. Stop When The Decision Becomes Obvious
 
-## 7. Stop When the Decision Becomes Obvious
+Repeating signals does not add value. Delaying commitment increases cost. Discomfort is not, by itself, a reason to continue discovery.
 
-Whether in discovery or delivery:
-- repeating signals does not add value
-- delaying commitment increases cost
-- discomfort is not a signal to continue
+When evidence converges, the right move is to decide and commit.
 
-When evidence converges, the right move is to **decide and commit**.
+## 8. Optimize For Long-Term Product Credibility
 
----
+Short-term gains that erode trust, introduce silent failure modes, or increase hidden complexity are rarely worth it.
 
-## 8. Optimize for Long-Term Product Credibility
+I favor decisions that protect:
 
-Short-term gains that:
-- erode trust
-- introduce silent failure modes
-- increase hidden complexity
-
-are rarely worth it.
-
-I prioritize decisions that protect:
 - predictability
 - explainability
+- resilience
 - long-term confidence in the product
 
-Even when this slows delivery in the short term.
+That often means accepting slower short-term delivery in exchange for a better product and a more trustworthy execution model.

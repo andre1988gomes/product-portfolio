@@ -1,16 +1,44 @@
-# User Story Template
+# Delivery Story Template
 
-**Título**: frase curta e descritiva.
+## Evidence Metadata
 
-**User Story**:  
-_As [persona/actor], I want [ação/comportamento], so that [benefício/justificação]._ 
+| Field | Value |
+| --- | --- |
+| Used in | Reusable across backlog artifacts in this portfolio |
+| Decision supported | Keep delivery slices tied to outcome intent, assumptions, and validation logic. |
+| Evidence type | Template |
+| Confidence level | High |
+| Outcome influenced | Clearer backlog slices and better delivery conversations. |
 
-**Why it needs to be done**: explicação breve da necessidade ou contexto.
+## User Story
 
-**What needs to be done**: expectativas comportamentais e critérios de produto (não implementação).
+As a <persona or actor>,  
+I want <capability or behavior>,  
+so that <benefit or outcome>.
 
-## Acceptance Criteria (Free Form Editor checklist)
+## Context
 
-- [ ] **AC1** — <criteria> (Status: Not Started | Assignee: <name/role> | Priority: P0/P1/P2)
-- [ ] **AC2** — <criteria> (Status: Not Started | Assignee: <name/role> | Priority: P0/P1/P2)
-- [ ] **AC3** — <criteria> (Status: Not Started | Assignee: <name/role> | Priority: P0/P1/P2)
+- Related problem or opportunity:
+- Dependencies:
+- Assumptions:
+
+## Acceptance Criteria
+
+- [ ] Criterion 1
+- [ ] Criterion 2
+- [ ] Criterion 3
+
+## Non-Goals
+
+- Explicitly out of scope:
+- Explicitly deferred:
+
+## Edge Cases And Exceptions
+
+- Known failure mode:
+- Known exception path:
+
+## Metrics Or Validation
+
+- Signal we expect to move:
+- Evidence that would show this slice worked:

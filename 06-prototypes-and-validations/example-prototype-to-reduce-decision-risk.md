@@ -1,87 +1,54 @@
-# Example — Using a Prototype to Reduce Decision Risk
+# Example - Using A Prototype To Reduce Decision Risk
 
----
+## Evidence Metadata
 
-## Decision to Be Made
+| Field | Value |
+| --- | --- |
+| Used in | [Pre-Charging](../01-case-studies/case-study-pre-charging/Accuracy-over-assumptions.md) |
+| Decision supported | Validate charging conditions on every session rather than rely on inferred or cached assumptions. |
+| Evidence type | Validation artifact, Operational, Proxy |
+| Confidence level | Medium to High |
+| Outcome influenced | Greater confidence in choosing correctness over assumption reuse. |
 
-Should the product rely on **inferred or cached charging assumptions** to optimize execution,
-or should it validate charging conditions **on every session**, even at the cost of higher complexity?
+## Decision To Be Made
 
-This decision would directly affect:
-- system reliability
-- user trust
-- long-term maintenance cost
-- dependency on external actors
-
-Once implemented at scale, reversing this decision would be expensive.
-
----
+Should the product rely on inferred or cached charging assumptions to optimize execution, or should it validate charging conditions on every session even at higher complexity?
 
 ## Risk Being Addressed
 
-The main risk was not technical feasibility, but **product correctness**.
+The main risk was not technical feasibility. It was product correctness.
 
-Specifically:
-- inferred assumptions might appear correct initially
+If the assumption-heavy path was wrong:
+
 - failures would surface late and inconsistently
 - recovery would be harder than prevention
-- negative outcomes would be difficult to explain to users and partners
-
-The risk was a **silent degradation of outcomes**, not an immediate failure.
-
----
+- negative outcomes would be difficult to explain
 
 ## Prototype Goal
 
 The prototype was designed to answer a narrow question:
 
-> Does validating charging conditions on every session materially improve outcome reliability compared to reusing inferred data?
-
-The goal was **not** to build a production-ready solution,
-but to generate enough evidence to support a product decision.
-
----
+Does session-based validation materially improve outcome reliability compared with reusing inferred assumptions?
 
 ## What Was Prototyped
 
-A lightweight prototype was built to:
-- execute charging sessions using session-based validation
-- compare behavior against sessions using inferred or cached assumptions
+A lightweight prototype was used to:
+
+- execute charging sessions with session-based validation
+- compare them against sessions using inferred or cached assumptions
 - observe deviations, recovery attempts, and outcome success
 
-The prototype intentionally ignored:
-- scalability
-- performance optimization
-- architectural elegance
-
-Only decision-relevant signals mattered.
-
----
+It intentionally ignored production-level scalability and elegance. Only decision-relevant evidence mattered.
 
 ## Signals Observed
 
-The prototype showed that:
-- session-based validation detected deviations earlier
-- fewer late-stage recovery attempts were required
-- outcomes were more predictable under changing conditions
-- failures, when they occurred, were easier to diagnose
+The prototype showed that session-based validation:
 
-While the prototype introduced additional steps, it reduced uncertainty around execution behavior.
-
----
+- detected deviations earlier
+- reduced dependence on late recovery
+- produced more predictable outcomes under changing conditions
+- made failures easier to diagnose when they occurred
 
 ## Decision
 
-Based on the prototype signals, the product decision was to:
-- favor session-based validation over assumption reuse
-- accept higher upfront complexity
-- deprioritize optimization until outcome reliability was established
-
-The prototype was intentionally discarded after the decision.
-
----
-
-## Trade-offs Accepted
-
-This decision accepted:
-- increased implementation effort
+Based on those signals, the product favored session-based validation, accepted higher upfront complexity, and deprioritized optimization until reliability was stronger.

@@ -1,103 +1,59 @@
-# Product Portfolio – André Gomes
+# Andre Gomes - Product Portfolio
 
-## How I Think About Product
+I am a senior product leader with a background in complex, constraint-heavy environments where customer value depends on strong judgment, cross-functional alignment, and disciplined execution. This portfolio is designed for General Senior PM conversations: it shows how I connect customer insight, business outcomes, delivery trade-offs, and technical reality across user-facing products, internal platforms, APIs, and decision-heavy initiatives.
 
-I work as a Product Owner / Product Visionary in complex domains, often with strong technical constraints, where products range from user-facing applications to platforms, APIs, and internal systems.
+## Proof At A Glance
 
-My focus is on maximizing long-term product value, even when that means pushing back on short-term feature requests, redefining scope, or deliberately slowing delivery to reduce future complexity and risk.
+- Built and shaped products across customer experiences, APIs, internal systems, and partner-dependent platforms.
+- Worked in environments where product success depended on engineering depth, external dependencies, and operational reliability.
+- Led decisions that changed scope, invalidated assumptions, and redirected roadmap commitments when evidence pointed elsewhere.
+- Used discovery, data, and lightweight documentation to support decisions rather than produce artifacts for their own sake.
+- Balanced user value, business control, monetization, delivery pressure, and long-term product credibility.
+- Portfolio examples are anonymized but intentionally specific about scale, constraints, and outcome direction.
 
-I believe that:
-- Products exist to enable better decisions, not just to automate workflows
-- Discovery without delivery is theory; delivery without discovery is waste
-- APIs, platforms, and internal systems are products, even when their users are engineers or machines
-- Good product work is about making trade-offs explicit and intentional
+## Start Here
 
----
+These three case studies are the fastest way to understand how I work:
 
-## Product Principles
+| Case study | What it shows |
+| --- | --- |
+| [Controlled API / OCPX](./01-case-studies/case-study-controlled-api/smart-charging.md) | Owning a critical execution path in a partner ecosystem to improve reliability, control, and strategic autonomy. |
+| [Discovery Pivot](./01-case-studies/case-study-discovery-pivot/case-study.md) | Changing product direction after invalidating a core assumption, despite roadmap pressure. |
+| [Pre-Charging / Accuracy Over Assumptions](./01-case-studies/case-study-pre-charging/Accuracy-over-assumptions.md) | Choosing correctness over convenience when optimization shortcuts would quietly degrade outcomes. |
 
-The work in this repository is guided by a set of **Product Principles** that define how decisions are made across discovery, delivery, and execution.
+## Capability Map
 
-These principles are not aspirational statements.  
-They act as **constraints on decision-making**, validated through real product work under technical, organizational, and market constraints.
+| Area | What to look at |
+| --- | --- |
+| Strategy | [Strategy and prioritization](./07-strategy-and-prioritization/README.md), flagship case studies, and decision records that show investment logic and non-goals. |
+| Discovery | [Discovery examples and frameworks](./03-discovery/README.md) focused on assumption testing, stop-or-proceed decisions, and problem reframing. |
+| Execution | [Product documentation](./02-product-documentation/README.md) that translates intent into slices, requirements, and alignment artifacts. |
+| Leadership | [How I work with stakeholders](./07-strategy-and-prioritization/how-i-work-with-stakeholders.md) plus cases where disagreement, alignment, and ownership shaped the outcome. |
+| Data-informed decisions | [Data analysis](./05-data-analysis/README.md) and [prototypes and validations](./06-prototypes-and-validations/README.md) used to support or change direction. |
 
-👉 [Product Principles](./PRODUCT-PRINCIPLES.md)
+## Principles
 
-They explain *why* the artefacts, case studies, and frameworks in this portfolio look the way they do.
+My product principles are documented separately in [PRODUCT-PRINCIPLES.md](./PRODUCT-PRINCIPLES.md). They are not meant to be the main entrypoint to this portfolio; they exist to explain the decision logic behind the case studies, documentation, and frameworks collected here.
 
----
+## How To Read This Portfolio
 
-## What This Repository Is
+Start with the featured case studies. If you want to go deeper, each case links to the evidence that informed it: discovery artifacts, product docs, alignment briefs, decision records, data analysis, frameworks, and validation notes.
 
-This repository is a curated product portfolio.
+<details>
+<summary>Evidence library</summary>
 
-It contains real-world product artefacts, case studies, and frameworks that demonstrate how I approach:
-- problem discovery and risk reduction
-- product strategy and prioritization
-- execution and delivery under constraints
-- validation, learning, and iteration
+### Core sections
 
-This is **not** a collection of templates for their own sake.  
-Every artefact exists to support or explain a concrete product decision.
+- [01 - Case Studies](./01-case-studies/README.md)
+- [02 - Product Documentation](./02-product-documentation/README.md)
+- [03 - Discovery](./03-discovery/README.md)
+- [04 - Frameworks and Playbooks](./04-frameworks-and-playbooks/README.md)
+- [05 - Data Analysis](./05-data-analysis/README.md)
+- [06 - Prototypes and Validations](./06-prototypes-and-validations/README.md)
+- [07 - Strategy and Prioritization](./07-strategy-and-prioritization/README.md)
 
-Several of the decisions, case studies, and frameworks in this repository align closely with **Evidence-Based Management (EBM)** principles.
-
-Rather than treating EBM as a reporting or metrics framework, these examples show how value, risk, adaptability, and time-to-market are continuously balanced through real product decisions under uncertainty.
-
----
-
-## How to Read This Repository
-
-This repository is **not organized as a linear product process**.
-
-The numbered folders represent different **lenses on product work**, not sequential steps:
-
-- **01 — Case Studies**  
-  Real product decisions, trade-offs, and outcomes under real constraints.
-
-- **02 — Product Documentation**  
-  How product intent is translated into executable work without turning the backlog into a feature factory.
-
-- **03 — Product Discovery**  
-  Discovery as a decision-making and risk-reduction tool, not a ritual.
-
-- **04 — Frameworks & Playbooks**  
-  Opinionated frameworks derived from real cases, not generic best practices.
-
-- **05 — Data Analysis**  
-  Data used to inform, validate, or change product decisions.
-
-- **06 — Prototypes & Validations**  
-  Prototypes and experiments used to reduce uncertainty and validate direction.
-
-Each section can be read independently, but together they represent a coherent product mindset grounded in outcomes and trade-offs.
-
----
-
-## My View on Product Ownership and Product Management
-
-In my experience:
-- Product Ownership without strategic ownership becomes backlog management
-- Product Management without delivery accountability becomes slideware
-
-I aim to operate at the intersection:
-- owning outcomes, not just outputs
-- connecting business intent with technical reality
-- making trade-offs explicit to stakeholders and teams
-
----
-
-## How to Use This Portfolio
-
-This portfolio can be used:
-- as a discussion starter in interviews or stakeholder conversations
-- as a reference for how I structure and reason about product problems
-- as a living body of work that evolves with experience and learning
-
-Feedback and challenge are welcome. Product thinking improves through scrutiny.
-
----
+</details>
 
 ## Contact
 
-If you would like to discuss any artefact, decision, or approach presented in this portfolio, feel free to reach out.
+If this portfolio is shared as part of a CV or interview process, use the contact details shared alongside that application. I am happy to discuss any case study, artifact, trade-off, or product principle included here.
