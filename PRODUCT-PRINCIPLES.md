@@ -83,3 +83,11 @@ I favor decisions that protect:
 - long-term confidence in the product
 
 That often means accepting slower short-term delivery in exchange for a better product and a more trustworthy execution model.
+
+## 9. Treat Transitions As Product Decisions
+
+Platform migrations, version cutover, and system deprecations are not engineering tasks with a product wrapper. They are product decisions that require sequencing judgment, risk management, and stakeholder alignment.
+
+Every transition question — which partners migrate first, what runs in parallel, when to cut over, what rollback looks like — is a product judgment call with user-facing consequences.
+
+Treating transitions as execution tickets hides the real decisions and shifts accountability to engineering without the authority to make the trade-offs.

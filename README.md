@@ -13,13 +13,24 @@ I am a senior product leader with a background in complex, constraint-heavy envi
 
 ## Start Here
 
-These three case studies are the fastest way to understand how I work:
+These case studies are the fastest way to understand how I work:
 
 | Case study | What it shows |
 | --- | --- |
 | [Controlled API / OCPX](./01-case-studies/case-study-controlled-api/smart-charging.md) | Owning a critical execution path in a partner ecosystem to improve reliability, control, and strategic autonomy. |
+| [Platform Migration](./01-case-studies/case-study-platform-migration/platform-migration.md) | Treating a forced backend migration as a sequenced product decision — partner-by-partner cutover with rollback protection and zero production disruption. |
+| [Degradation Strategy](./01-case-studies/case-study-degradation-strategy/degradation-strategy.md) | Implementing an alternative communication channel for an unsteerable vehicle generation, including cross-team monitoring boundary negotiation. |
+
+<details>
+<summary>More case studies</summary>
+
+| Case study | What it shows |
+| --- | --- |
 | [Discovery Pivot](./01-case-studies/case-study-discovery-pivot/case-study.md) | Changing product direction after invalidating a core assumption, despite roadmap pressure. |
 | [Pre-Charging / Accuracy Over Assumptions](./01-case-studies/case-study-pre-charging/Accuracy-over-assumptions.md) | Choosing correctness over convenience when optimization shortcuts would quietly degrade outcomes. |
+| [Monitoring Evolution](./01-case-studies/case-study-monitoring-evolution/monitoring-evolution.md) | Replacing polling-based monitoring with event-driven observability after operational evidence proved the original design was simultaneously too sensitive and too blind. |
+
+</details>
 
 ## Capability Map
 

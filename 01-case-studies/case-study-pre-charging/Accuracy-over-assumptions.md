@@ -53,6 +53,9 @@ Several realities made assumption reuse risky:
 - the visible pre-charging step directly affects user perception
 - location detection was approximate, which meant multiple wallboxes could be treated as the same place
 - charging characteristics could vary even at the same nominal location
+- vehicles can enter sleep mode during charging, meaning state-of-charge data goes stale without any signal to the backend. The system might believe the vehicle is at forty percent when it has already reached sixty percent, creating a gap between the plan and reality that only surfaces when the vehicle wakes
+
+The vehicle sleep constraint was particularly insidious. It was not a failure — it was normal vehicle behavior during long charging sessions. But it meant the system could not rely on continuous state updates, which made any assumption-caching approach even riskier: cached data and stale live data would compound rather than correct each other.
 
 The core constraint was that stability across sessions could not be assumed safely enough to become the default design.
 
@@ -127,14 +130,17 @@ This case made trade-offs explicit across product, architecture, and functional 
 ### Evidence notes
 
 - Operational evidence: reduced dependence on downstream correction when current inputs were validated
+- Operational evidence: vehicle sleep during charging created stale state data that would have compounded with cached assumptions, validating the session-based approach
+- Operational evidence: a cross-boundary variable overflow defect demonstrated how a symptom in one system could originate from an assumption violation far upstream — reinforcing why each session needed fresh validation rather than inherited state
 - Proxy evidence: stronger predictability and lower silent-risk exposure compared with location-based assumption reuse
 - Qualitative evidence: better alignment on why correctness was a product requirement rather than an engineering preference
 
 ## What I Would Do Differently
 
 - I would frame the choice earlier as accuracy versus assumption reuse so the real trade-off was visible from the start.
-- I would use concrete failure scenarios sooner to show how cached assumptions could silently degrade outcomes over time.
+- I would use concrete failure scenarios sooner to show how cached assumptions could silently degrade outcomes over time. The vehicle sleep scenario alone would have been a compelling example: "what happens when the vehicle goes silent for two hours and wakes up at a completely different state of charge than the plan expects?"
 - I would make the user-visible impact of the first pre-charging behavior more explicit earlier in stakeholder discussions.
+- I would define explicit data freshness requirements upfront — maximum acceptable age for state data before it must be re-validated — rather than discovering the staleness problem through operational defects.
 
 ## Linked Supporting Artifacts
 
@@ -144,3 +150,7 @@ This case made trade-offs explicit across product, architecture, and functional 
 - [Framework - Outcome over optimization](../../04-frameworks-and-playbooks/outcome-over-optimization-framework.md)
 - [Example - Applying outcome over optimization](../../04-frameworks-and-playbooks/example-outcome-over-optimization.md)
 - [KPI and success signals](../../07-strategy-and-prioritization/kpi-and-success-signals.md)
+- [Case study - Controlled API / OCPX](../case-study-controlled-api/smart-charging.md)
+- [Case study - Platform Migration](../case-study-platform-migration/platform-migration.md)
+- [Case study - Degradation Strategy](../case-study-degradation-strategy/degradation-strategy.md)
+- [Case study - Monitoring Evolution](../case-study-monitoring-evolution/monitoring-evolution.md)

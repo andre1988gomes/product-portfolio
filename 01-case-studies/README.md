@@ -9,6 +9,9 @@ This section contains the main product stories in the portfolio. They are design
 | [Controlled API / OCPX](./case-study-controlled-api/smart-charging.md) | Product ownership in a complex partner ecosystem, with reliability, monetization, and operational control all in play. |
 | [Discovery Pivot](./case-study-discovery-pivot/case-study.md) | Evidence-based problem reframing under roadmap pressure. |
 | [Pre-Charging / Accuracy Over Assumptions](./case-study-pre-charging/Accuracy-over-assumptions.md) | Choosing correctness over convenience when optimization would quietly degrade outcomes. |
+| [Platform Migration](./case-study-platform-migration/platform-migration.md) | Treating a forced backend migration as a product decision — sequencing partners by risk, preserving rollback, and protecting production during a parallel-run cutover. |
+| [Degradation Strategy](./case-study-degradation-strategy/degradation-strategy.md) | Implementing an alternative communication channel for an unsteerable vehicle generation when the primary path failed, including cross-team monitoring boundary negotiation. |
+| [Monitoring Evolution](./case-study-monitoring-evolution/monitoring-evolution.md) | Replacing a polling-based monitoring system with event-driven observability after operational evidence proved the original design was simultaneously too sensitive and too blind. |
 
 ## What These Cases Show
 

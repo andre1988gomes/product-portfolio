@@ -36,6 +36,8 @@ What mattered most to users was not configuration depth. It was confidence that:
 
 Energy providers were also customers of the orchestration layer in practice. They needed accurate, timely information to create viable charging plans and adapt when conditions changed.
 
+When the new API was introduced, partners complained that the structure differed significantly from the legacy interface they had built against. The biggest concrete change request was to include the relay cycle budget — a physical constraint that limited how many times the system could switch charging modes. Partners needed this data to build valid plans, but it was not initially exposed. This signaled that the API contract was not just a technical interface; it was a developer experience problem where consumer assumptions had to be respected.
+
 ## Business Context
 
 Before the Controlled API, external partners could drive charging behavior through less-governed channels. That created three business problems:
@@ -105,6 +107,10 @@ My contribution was to:
 
 One of the clearest examples was the pre-charging discussion. A "last known settings per location" approach looked efficient, but I argued against it because it converted real-world variability into silent, compounding risk. That position was initially unpopular, but it was consistent with the actual customer outcome the product was accountable for.
 
+Another significant moment was the default plan removal. The system automatically generated a default charging plan during pre-charging. I pushed to remove it because it consumed relay cycle budget unnecessarily, created unpredictable behavior when immediately superseded by a partner-submitted plan, and added orchestration complexity. The onboard software team resisted removal because their logic depended on receiving a plan within thirty seconds — a constraint imposed by charging hardware standards. I staged the deprecation: the default plan stayed temporarily while the consuming team developed fallback logic, and only after their migration was complete did the removal proceed. This cost multiple sprints of parallel work but preserved the simplification.
+
+A third point of friction was the command interface decision. I advocated for switching from a complex charging profile interface to a simpler start/stop command model for remote charging control. Engineering disagreed — the profile-based approach had better backward compatibility across older vehicle generations and was battle-tested. I argued that start/stop was simpler to debug, easier to explain, and mapped directly to the actual control model. The simpler interface was selected, accepting additional integration work for older vehicles in exchange for long-term interface clarity.
+
 ## Execution And Trade-Offs
 
 The decision changed both scope and sequencing.
@@ -146,10 +152,11 @@ The initiative made trade-offs more explicit across product, engineering, and fu
 
 ## What I Would Do Differently
 
+- I would implement an end-to-end event streaming pipeline from the start. The lack of a unified observability stream meant debugging required manually stitching traces across four or more systems. Having this foundation would have enabled better monitoring, faster incident response, and fleet-wide observability instead of per-vehicle tracing.
+- I would define explicit kill criteria for every external dependency: "if X is not ready by date Y, we execute fallback Z." Dependencies were identified as risks but not actively killed or mitigated early enough. A cross-boundary data overflow defect proved that interface assumptions should have been validated earlier.
+- I would invest in a more complete testing strategy from the beginning. Pre-production testing caught issues that should have been identified earlier with systematic cross-version compatibility testing. A comprehensive test plan was eventually created, but the systematic approach came late.
 - I would surface vehicle-specific constraints earlier so stakeholders understood sooner how much real-world variability shaped the solution space.
-- I would document accepted versus non-negotiable risks earlier, especially where dependency ownership affected product credibility.
 - I would escalate disagreements earlier when I believed a proposed shortcut created silent downstream risk.
-- I would cut certain dependencies sooner, particularly where third-party ownership delayed clarity without adding strategic value.
 
 ## Linked Supporting Artifacts
 
@@ -159,3 +166,6 @@ The initiative made trade-offs more explicit across product, engineering, and fu
 - [Example - Communicating a trade-off decision](../../02-product-documentation/backlog-artifacts/alignment-docs/example-tradeoff-communication.md)
 - [Example - Using data to reframe the product problem](../../05-data-analysis/example-data-informed-decision.md)
 - [Framework - Outcome over optimization](../../04-frameworks-and-playbooks/outcome-over-optimization-framework.md)
+- [Case study - Platform Migration](../case-study-platform-migration/platform-migration.md)
+- [Case study - Degradation Strategy](../case-study-degradation-strategy/degradation-strategy.md)
+- [Case study - Monitoring Evolution](../case-study-monitoring-evolution/monitoring-evolution.md)
